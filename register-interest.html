@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get in Touch — Pairadise Resort, Pai</title>
+  <meta name="description" content="Reach out to Pairadise Resort in Pai, Mae Hong Son. Ask about bungalows, garden-to-plate dining, and slow mornings — we'll write back soon." />
+  <link rel="icon" type="image/png" href="assets/pairadise-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Spectral:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest:        #1E4738;
+      --forest-deep:   #163A2D;
+      --forest-soft:   #2A5A47;
+      --cream:         #F2EEE1;
+      --cream-card:    #FBFAF2;
+      --terracotta:    #BE6A3C;
+      --terracotta-dk: #A4552C;
+      --gold:          #C99A4E;
+      --ink:           #21302A;
+      --ink-soft:      #4C5A52;
+      --muted:         #79847C;
+      --line:          #DAD4C3;
+      --line-dark:     rgba(255,255,255,0.14);
+
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'Spectral', Georgia, 'Times New Roman', serif;
+      --font-ui:      'Montserrat', Arial, sans-serif;
+
+      --max-w: 720px;
+      --radius: 6px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.7;
+      font-size: 1.0625rem;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    .eyebrow {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    /* HEADER / LOGO */
+    .site-head {
+      background: #fff;
+      padding: 22px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .site-head img { height: 96px; width: auto; }
+
+    /* HERO */
+    .hero {
+      background: var(--forest);
+      color: var(--cream);
+      text-align: center;
+      padding: 56px 28px 72px;
+      border-bottom: 1px solid var(--line-dark);
+    }
+    .hero .eyebrow { color: var(--gold); margin-bottom: 18px; }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(2.4rem, 6vw, 3.4rem);
+      line-height: 1.1;
+      color: var(--cream);
+      margin-bottom: 18px;
+    }
+    .hero p {
+      font-family: var(--font-body);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: rgba(242,238,225,0.82);
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    /* FORM CARD */
+    .form-wrap { padding: 56px 24px 72px; }
+    .card {
+      max-width: var(--max-w);
+      margin: -48px auto 0;
+      background: var(--cream-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 18px 50px rgba(22,58,45,0.12);
+      padding: clamp(28px, 5vw, 52px);
+    }
+    .card .eyebrow { color: var(--terracotta); margin-bottom: 10px; }
+    .card h2 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.9rem;
+      color: var(--forest);
+      margin-bottom: 8px;
+    }
+    .card .lede {
+      color: var(--ink-soft);
+      margin-bottom: 32px;
+      font-size: 1.02rem;
+    }
+
+    .field { margin-bottom: 22px; }
+    .field label {
+      display: block;
+      font-family: var(--font-ui);
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--forest);
+      margin-bottom: 8px;
+    }
+    .field .req { color: var(--terracotta); }
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 1.02rem;
+      color: var(--ink);
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 13px 15px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .field textarea { resize: vertical; min-height: 130px; line-height: 1.6; }
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--forest-soft);
+      box-shadow: 0 0 0 3px rgba(42,90,71,0.12);
+    }
+    .field-row { display: flex; gap: 18px; }
+    .field-row .field { flex: 1; }
+
+    /* CHOICES (activity checkboxes) */
+    .choices { border: none; }
+    .choices legend {
+      font-family: var(--font-ui);
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--forest);
+      margin-bottom: 12px;
+      padding: 0;
+    }
+    .choice {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .choice:hover { border-color: var(--forest-soft); }
+    .choice input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+    .choice-box {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      margin-top: 2px;
+      border: 1.5px solid var(--line);
+      border-radius: 5px;
+      background: var(--cream);
+      position: relative;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .choice-box::after {
+      content: '';
+      position: absolute;
+      left: 7px; top: 3px;
+      width: 6px; height: 11px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg) scale(0);
+      transition: transform 0.15s ease;
+    }
+    .choice input:checked ~ .choice-box { background: var(--terracotta); border-color: var(--terracotta); }
+    .choice input:checked ~ .choice-box::after { transform: rotate(45deg) scale(1); }
+    .choice input:checked ~ .choice-text strong { color: var(--terracotta-dk); }
+    .choice:has(input:checked) { border-color: var(--terracotta); background: rgba(190,106,60,0.05); }
+    .choice input:focus-visible ~ .choice-box { box-shadow: 0 0 0 3px rgba(42,90,71,0.2); }
+    .choice-text { display: flex; flex-direction: column; line-height: 1.4; }
+    .choice-text strong { font-family: var(--font-display); font-weight: 600; font-size: 1.08rem; color: var(--forest); transition: color 0.2s; }
+    .choice-text em { font-family: var(--font-ui); font-style: normal; font-size: 0.78rem; color: var(--muted); letter-spacing: 0.02em; margin-top: 2px; }
+
+    /* honeypot — hidden from humans, catches bots */
+    .gotcha { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+    .submit-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--terracotta);
+      border: none;
+      border-radius: var(--radius);
+      padding: 16px 34px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .submit-btn:hover { background: var(--terracotta-dk); }
+    .submit-btn:active { transform: translateY(1px); }
+    .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    .form-note {
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    /* feedback states */
+    .feedback { display: none; margin-top: 24px; padding: 18px 20px; border-radius: var(--radius); font-size: 0.98rem; }
+    .feedback.ok  { display: block; background: rgba(42,90,71,0.10); border: 1px solid rgba(42,90,71,0.3); color: var(--forest); }
+    .feedback.err { display: block; background: rgba(190,106,60,0.10); border: 1px solid rgba(190,106,60,0.35); color: var(--terracotta-dk); }
+    .feedback strong { font-family: var(--font-ui); font-weight: 700; }
+
+    /* FOOTER */
+    footer {
+      background: var(--forest-deep);
+      color: rgba(242,238,225,0.7);
+      text-align: center;
+      padding: 40px 28px;
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+    }
+    footer .f-meta { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; letter-spacing: 0.04em; }
+    footer a { color: var(--gold); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    footer .copyright { color: rgba(242,238,225,0.4); font-size: 0.74rem; letter-spacing: 0.04em; }
+
+    @media (max-width: 560px) {
+      .field-row { flex-direction: column; gap: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-head">
+    <img src="assets/pairadise-logo.png" alt="Pairadise Resort" />
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="eyebrow">Find your peace in Pai</p>
+    <h1>What calls to you?</h1>
+    <p>We&rsquo;re shaping a calendar of gatherings at Pairadise &mdash; sound, movement, stillness. Tell us what you&rsquo;d love to be part of, and we&rsquo;ll let you know when it&rsquo;s happening.</p>
+  </section>
+
+  <!-- FORM -->
+  <div class="form-wrap">
+    <div class="card">
+      <p class="eyebrow">Register Your Interest</p>
+      <h2>Tell us what moves you</h2>
+      <p class="lede">Pick the experiences that call to you. We&rsquo;ll reach out as we plan each gathering &mdash; no spam, just an invitation when the time is right.</p>
+
+      <form id="contact-form" action="https://script.google.com/macros/s/AKfycbxKsHearZrytTdj0ViE2FbyrLmKUSJxuamf4-oaRmC_1C9SYHBvT94oL7PDiUwNMROu/exec" method="POST">
+
+        <div class="field-row">
+          <div class="field">
+            <label for="name">Name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+        </div>
+
+        <fieldset class="field choices">
+          <legend>Which experiences call to you?</legend>
+          <label class="choice">
+            <input type="checkbox" name="interests" value="Sound Healing" />
+            <span class="choice-box"></span>
+            <span class="choice-text"><strong>Sound Healing</strong><em>Gongs, singing bowls &amp; deep rest</em></span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" name="interests" value="Contact Improvisation Dance" />
+            <span class="choice-box"></span>
+            <span class="choice-text"><strong>Contact Improvisation Dance</strong><em>Movement, weight &amp; connection</em></span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" name="interests" value="Conscious Retreats" />
+            <span class="choice-box"></span>
+            <span class="choice-text"><strong>Conscious Retreats</strong><em>Multi-day immersions in presence</em></span>
+          </label>
+        </fieldset>
+
+        <div class="field">
+          <label for="other">Name your choices</label>
+          <input type="text" id="other" name="other_interest" placeholder="Yoga, breathwork, cacao ceremony, a jam session…" />
+        </div>
+
+        <div class="field">
+          <label for="message">Anything else you&rsquo;d love to see? <span style="font-weight:500;color:var(--muted);letter-spacing:0;text-transform:none;font-family:var(--font-body);">(optional)</span></label>
+          <textarea id="message" name="message" placeholder="Tell us what you&rsquo;re hoping for…"></textarea>
+        </div>
+
+        <!-- Formspree: set the email subject line -->
+        <input type="hidden" name="_subject" value="New interest registration from Pairadise" />
+        <!-- Honeypot anti-spam field (Formspree ignores submissions where this is filled) -->
+        <div class="gotcha" aria-hidden="true">
+          <label for="company">Leave this empty</label>
+          <input type="text" id="company" name="_gotcha" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <button type="submit" class="submit-btn" id="submit-btn">Count me in &rarr;</button>
+        <p class="form-note">We&rsquo;ll never share your details. Just a note when something you love is happening.</p>
+
+        <div class="feedback" id="feedback-ok" role="status">
+          <strong>Thank you &mdash; you&rsquo;re on the list.</strong><br />
+          We&rsquo;ll be in touch as these gatherings come to life. Your corner is waiting.
+        </div>
+        <div class="feedback" id="feedback-err" role="alert">
+          <strong>Something went wrong.</strong><br />
+          Please try again, or email us directly at <a href="mailto:management.pairadise@gmail.com" style="color:inherit;font-weight:700;">management.pairadise@gmail.com</a>.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="f-meta">
+      <span>&#9906; Pai, Mae Hong Son</span>
+      <a href="https://instagram.com/pairadise.resort" target="_blank" rel="noopener noreferrer">&#64;pairadise.resort</a>
+    </div>
+    <div class="copyright">&copy; 2026 Pairadise Resort</div>
+  </footer>
+
+  <script>
+    (function () {
+      // Google Apps Script Web App URL (ends in /exec). Same as the form's action.
+      var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxKsHearZrytTdj0ViE2FbyrLmKUSJxuamf4-oaRmC_1C9SYHBvT94oL7PDiUwNMROu/exec';
+
+      var form = document.getElementById('contact-form');
+      var btn = document.getElementById('submit-btn');
+      var ok = document.getElementById('feedback-ok');
+      var err = document.getElementById('feedback-err');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        ok.classList.remove('ok');
+        err.classList.remove('err');
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+
+        // Apps Script doesn't return CORS headers, so we send a "simple" request
+        // (url-encoded, no custom headers) with mode:'no-cors'. The response is
+        // opaque — if the network call resolves, the row was delivered to the sheet.
+        fetch(SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          body: new URLSearchParams(new FormData(form))
+        }).then(function () {
+          form.reset();
+          ok.classList.add('ok');
+          btn.style.display = 'none';
+        }).catch(function () {
+          err.classList.add('err');
+          btn.disabled = false;
+          btn.innerHTML = 'Count me in &rarr;';
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

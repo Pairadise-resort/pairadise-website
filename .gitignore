@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Legacy / non-site files (kept locally, not part of the published website)
+pairadise-activities.html
+google-apps-script.gs
+
+# Unused source photos (kept locally; not referenced by the site yet)
+assets/IMG_2788.jpg
+assets/IMG_2790.jpg

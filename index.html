@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pairadise Resort | Peaceful Bungalows in Pai, Thailand</title>
+  <meta name="description" content="Quiet, natural bungalows in Pai, Thailand, surrounded by water, mountains, and garden calm. Just a 10-15 minute walk from Pai walking street. Check rooms and book your stay." />
+
+  <!-- ============================================================
+       REPLACE: Favicon lives at assets/pairadise-logo.png
+       ============================================================ -->
+  <link rel="icon" type="image/png" href="assets/pairadise-logo.png" />
+
+  <!-- Google Fonts: Playfair Display (headings), Spectral (body), Montserrat (UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Spectral:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Skip link for keyboard / screen-reader users -->
+  <a class="skip-link" href="#rooms">Skip to rooms</a>
+
+  <!-- ============================================================
+       1. STICKY HEADER
+       ============================================================ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Pairadise Resort home">
+        <!-- REPLACE: brand logo at assets/pairadise-logo.png -->
+        <img src="assets/pairadise-logo.png" alt="Pairadise Resort" class="brand-logo" />
+        <span class="brand-name">Pairadise<span class="brand-sub">Resort &middot; Pai</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#rooms">Rooms</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <!-- REPLACE: points to the retreat-interest signup for now; swap to a Retreats page when ready -->
+          <li><a class="nav-soon" href="register-interest.html">Retreats <span class="soon-badge">coming soon</span></a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- REPLACE: booking link → currently Lodgify -->
+      <a class="btn btn-primary header-cta" href="https://pairadise.lodgify.com" target="_blank" rel="noopener noreferrer">Book Now</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         2. HERO
+         ============================================================ -->
+    <section class="hero">
+      <!-- REPLACE: hero background image at assets/hero.jpg -->
+      <div class="hero-bg" role="img" aria-label="Pairadise Resort gardens and bungalows in Pai"></div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow hero-eyebrow">Pai &middot; Mae Hong Son &middot; Thailand</p>
+        <h1>Peaceful bungalows in Pai, surrounded by water, mountains, and garden&nbsp;calm</h1>
+        <p class="hero-sub">Stay close to Pai walking street while sleeping in a quiet natural&nbsp;retreat.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#rooms">Check Rooms &amp; Availability</a>
+          <!-- REPLACE: WhatsApp number in link below (wa.me/<number>) -->
+          <a class="btn btn-ghost btn-lg" href="https://wa.me/66838755379" target="_blank" rel="noopener noreferrer">
+            Message us on WhatsApp
+          </a>
+        </div>
+
+        <ul class="trust-notes" aria-label="What makes Pairadise special">
+          <li>Private bungalows</li>
+          <li>Natural mountain water pool</li>
+          <li>Steam sauna</li>
+          <li>10-15 min walk to town</li>
+        </ul>
+
+        <!-- REPLACE: YouTube video — swap the embed ID (JH7DWVd5GgA) and start time (start=37) to change the clip -->
+        <div class="hero-video">
+          <iframe
+            src="https://www.youtube.com/embed/JH7DWVd5GgA?start=37"
+            title="Pairadise Resort, Pai"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3. QUICK ROOM FINDER
+         ============================================================ -->
+    <section class="section" id="rooms">
+      <div class="container">
+        <div class="section-head">
+          <h2>Find your bungalow</h2>
+          <p class="section-lede">Every room is its own private bungalow with AC, a private bathroom, and high-speed WiFi. Pick the one that fits and book it directly.</p>
+        </div>
+
+        <!-- ============================================================
+             ROOM CARDS — each links straight to its Lodgify booking page.
+             REPLACE images: same-category units can share one photo
+             (e.g. point room-01..06 all at assets/room-pond-superior.jpg)
+             or give each unit its own file (assets/room-01.jpg, etc.).
+             ============================================================ -->
+        <div class="room-grid">
+
+          <!-- UNIT 01 — Pond View Superior -->
+          <article class="card room-card">
+            <div class="room-img" style="background-image:url('assets/room-01.jpg')" role="img" aria-label="Pairadise 01, Sunset Pond View Superior bungalow"></div>
+            <div class="room-body">
+              <h3>Pairadise 01</h3>
+              <p class="fit-tag">Pond View Superior &middot; Best for couples</p>
+              <ul class="chips">
+                <li>2 guests</li><li>1 bed</li><li>AC</li><li>Private bathroom</li><li>WiFi</li><li>Pond view</li>
+              </ul>
+              <div class="room-actions">
+                <a class="btn btn-primary" href="https://pairadise.lodgify.com/en/pairadise-01-sunset-pond-view-superior" target="_blank" rel="noopener noreferrer">Check Availability &amp; Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- UNIT 02 — Pond View Superior -->
+          <article class="card room-card">
+            <div class="room-img" style="background-image:url('assets/room-02.jpg')" role="img" aria-label="Pairadise 02, Sunset Pond View Superior bungalow"></div>
+            <div class="room-body">
+              <h3>Pairadise 02</h3>
+              <p class="fit-tag">Pond View Superior &middot; Best for couples</p>
+              <ul class="chips">
+                <li>2 guests</li><li>1 bed</li><li>AC</li><li>Private bathroom</li><li>WiFi</li><li>Pond view</li>
+              </ul>
+              <div class="room-actions">
+                <a class="btn btn-primary" href="https://pairadise.lodgify.com/en/pairadise-02-sunset-pond-view-superior" target="_blank" rel="noopener noreferrer">Check Availability &amp; Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- UNIT 03 — Pond View Superior -->
+          <article class="card room-card">
+            <div class="room-img" style="background-image:url('assets/room-03.jpg')" role="img" aria-label="Pairadise 03, Sunset Pond View Superior bungalow"></div>
+            <div class="room-body">
+              <h3>Pairadise 03</h3>
+              <p class="fit-tag">Pond View Superior &middot; Best for couples</p>
+              <ul class="chips">
+                <li>2 guests</li><li>1 bed</li><li>AC</li><li>Private bathroom</li><li>WiFi</li><li>Pond view</li>
+              </ul>
+              <div class="room-actions">
+                <a class="btn btn-primary" href="https://pairadise.lodgify.com/en/pairadise-03-sunset-pond-view-superior" target="_blank" rel="noopener noreferrer">Check Availability &amp; Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- UNIT 04 — Pond View Superior -->
+          <article class="card room-card">
+            <div class="room-img" style="background-image:url('assets/room-04.jpg')" role="img" aria-label="Pairadise 04, Sunset Pond View Superior bungalow"></div>
+            <div class="room-body">
+              <h3>Pairadise 04</h3>
+              <p class="fit-tag">Pond View Superior &middot; Best for couples</p>
+              <ul class="chips">
+                <li>2 guests</li><li>1 bed</li><li>AC</li><li>Private bathroom</li><li>WiFi</li><li>Pond view</li>
+              </ul>
+              <div class="room-actions">
+                <a class="btn btn-primary" href="https://pairadise.lodgify.com/en/pairadise-04-sunset-pond-view-superior" target="_blank" rel="noopener noreferrer">Check Availability &amp; Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- UNIT 05 — Pond View Superior -->
+          <article class="card room-card">
+            <div class="room-img" style="background-image:url('assets/room-05.jpg')" role="img" aria-label="Pairadise 05, Sunset Pond View Superior bungalow"></div>
+            <div class="room-body">
+              <h3>Pairadise 05</h3>
+              <p class="fit-tag">Pond View Superior &middot; Best for couples</p>
+              <ul class="chips">
+                <li>2 guests</li><li>1 bed</li><li>AC</li><li>Private bathroom</li><li>WiFi</li><li>Pond view</li>
+              </ul>
+              <div class="room-actions">
+                <a class="btn btn-primary" href="https://pairadise.lodgify.com/en/pairadise-05-sunset-pond-view-superior" target="_blank" rel="noopener noreferrer">Check Availability &amp; Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- UNIT 06 — Pond View Superior -->
+          <article class="card room-card">
+            <div class="room-img" style="background-image:url('assets/room-06.jpg')" role="img" aria-label="Pairadise 06, Sunset Pond View Superior bungalow"></div>
+            <div class="room-body">
+              <h3>Pairadise 06</h3>
+              <p class="fit-tag">Pond View Superior &middot; Best for couples</p>
+              <ul class="chips">
+                <li>2 guests</li><li>1 bed</li><li>AC</li><li>Private bathroom</li><li>WiFi</li><li>Pond view</li>
+              </ul>
+              <div class="room-actions">
+                <a class="btn btn-primary" href="https://pairadise.lodgify.com/en/pairadise-06-sunset-pond-view-superior" target="_blank" rel="noopener noreferrer">Check Availability &amp; Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- UNIT 07 — Garden View Superior -->
+          <article class="card room-card">
+            <div class="room-img" style="background-image:url('assets/room-07.jpg')" role="img" aria-label="Pairadise 07, Sunset Garden View Superior bungalow"></div>
+            <div class="room-body">
+              <h3>Pairadise 07</h3>
+              <p class="fit-tag">Garden View Superior &middot; Best for couples</p>
+              <ul class="chips">
+                <li>2 guests</li><li>1 bed</li><li>AC</li><li>Private bathroom</li><li>WiFi</li><li>Garden view</li>
+              </ul>
+              <div class="room-actions">
+                <a class="btn btn-primary" href="https://pairadise.lodgify.com/en/pairadise-07-sunset-garden-view-superior" target="_blank" rel="noopener noreferrer">Check Availability &amp; Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- UNIT 08 — Garden View Superior -->
+          <article class="card room-card">
+            <div class="room-img" style="background-image:url('assets/room-08.jpg')" role="img" aria-label="Pairadise 08, Sunset Garden View Superior bungalow"></div>
+            <div class="room-body">
+              <h3>Pairadise 08</h3>
+              <p class="fit-tag">Garden View Superior &middot; Best for couples</p>
+              <ul class="chips">
+                <li>2 guests</li><li>1 bed</li><li>AC</li><li>Private bathroom</li><li>WiFi</li><li>Garden view</li>
+              </ul>
+              <div class="room-actions">
+                <a class="btn btn-primary" href="https://pairadise.lodgify.com/en/pairadise-08-sunset-garden-view-superior" target="_blank" rel="noopener noreferrer">Check Availability &amp; Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- UNIT 09 — Garden View Superior LUX -->
+          <article class="card room-card">
+            <div class="room-img" style="background-image:url('assets/room-09.jpg')" role="img" aria-label="Pairadise 09, Sunset Garden View Superior LUX bungalow"></div>
+            <div class="room-body">
+              <h3>Pairadise 09</h3>
+              <p class="fit-tag">Garden View Superior LUX &middot; Couples, upgraded</p>
+              <ul class="chips">
+                <li>2 guests</li><li>1 bed</li><li>AC</li><li>Private bathroom</li><li>WiFi</li><li>Garden view</li><li>LUX</li>
+              </ul>
+              <div class="room-actions">
+                <a class="btn btn-primary" href="https://pairadise.lodgify.com/en/pairadise-09-sunset-garden-view-superior-lux" target="_blank" rel="noopener noreferrer">Check Availability &amp; Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- UNIT 10 — Family Studio Superior LUX -->
+          <article class="card room-card">
+            <div class="room-img" style="background-image:url('assets/room-10.jpg')" role="img" aria-label="Pairadise 10, Sunset Family Studio Superior LUX"></div>
+            <div class="room-body">
+              <h3>Pairadise 10</h3>
+              <p class="fit-tag">Family Studio Superior LUX &middot; Family friendly</p>
+              <ul class="chips">
+                <li>4 guests</li><li>2 beds</li><li>AC</li><li>Private bathroom</li><li>WiFi</li><li>Family studio</li><li>LUX</li>
+              </ul>
+              <div class="room-actions">
+                <a class="btn btn-primary" href="https://pairadise.lodgify.com/en/pairadise-10-sunset-family-studio-superior-lux" target="_blank" rel="noopener noreferrer">Check Availability &amp; Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- UNIT 11 — Pond View Superior LUX -->
+          <article class="card room-card">
+            <div class="room-img" style="background-image:url('assets/room-11.jpg')" role="img" aria-label="Pairadise 11, Sunset Pond View Superior LUX bungalow"></div>
+            <div class="room-body">
+              <h3>Pairadise 11</h3>
+              <p class="fit-tag">Pond View Superior LUX &middot; Couples or small groups</p>
+              <ul class="chips">
+                <li>3 guests</li><li>2 beds</li><li>AC</li><li>Private bathroom</li><li>WiFi</li><li>Pond view</li><li>LUX</li>
+              </ul>
+              <div class="room-actions">
+                <a class="btn btn-primary" href="https://pairadise.lodgify.com/en/pairadise-11-sunset-pond-view-superior-lux" target="_blank" rel="noopener noreferrer">Check Availability &amp; Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- UNIT 12 — Pond View Superior LUX -->
+          <article class="card room-card">
+            <div class="room-img" style="background-image:url('assets/room-12.jpg')" role="img" aria-label="Pairadise 12, Sunset Pond View Superior LUX bungalow"></div>
+            <div class="room-body">
+              <h3>Pairadise 12</h3>
+              <p class="fit-tag">Pond View Superior LUX &middot; Couples or small groups</p>
+              <ul class="chips">
+                <li>3 guests</li><li>2 beds</li><li>AC</li><li>Private bathroom</li><li>WiFi</li><li>Pond view</li><li>LUX</li>
+              </ul>
+              <div class="room-actions">
+                <a class="btn btn-primary" href="https://pairadise.lodgify.com/en/pairadise-12-sunset-pond-view-superior-lux" target="_blank" rel="noopener noreferrer">Check Availability &amp; Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- UNIT 14 — Pond View Superior LUX -->
+          <article class="card room-card">
+            <div class="room-img" style="background-image:url('assets/room-14.jpg')" role="img" aria-label="Pairadise 14, Sunset Pond View Superior LUX bungalow"></div>
+            <div class="room-body">
+              <h3>Pairadise 14</h3>
+              <p class="fit-tag">Pond View Superior LUX &middot; Couples or small groups</p>
+              <ul class="chips">
+                <li>3 guests</li><li>2 beds</li><li>AC</li><li>Private bathroom</li><li>WiFi</li><li>Pond view</li><li>LUX</li>
+              </ul>
+              <div class="room-actions">
+                <a class="btn btn-primary" href="https://pairadise.lodgify.com/en/pairadise-14-sunset-pond-view-superior-lux" target="_blank" rel="noopener noreferrer">Check Availability &amp; Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- UNIT 15 — Pond View Superior LUX -->
+          <article class="card room-card">
+            <div class="room-img" style="background-image:url('assets/room-15.jpg')" role="img" aria-label="Pairadise 15, Sunset Pond View Superior LUX bungalow"></div>
+            <div class="room-body">
+              <h3>Pairadise 15</h3>
+              <p class="fit-tag">Pond View Superior LUX &middot; Couples or small groups</p>
+              <ul class="chips">
+                <li>3 guests</li><li>2 beds</li><li>AC</li><li>Private bathroom</li><li>WiFi</li><li>Pond view</li><li>LUX</li>
+              </ul>
+              <div class="room-actions">
+                <a class="btn btn-primary" href="https://pairadise.lodgify.com/en/pairadise-15-sunset-pond-view-superior-lux" target="_blank" rel="noopener noreferrer">Check Availability &amp; Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- UNIT 16 — Pond View Superior LUX -->
+          <article class="card room-card">
+            <div class="room-img" style="background-image:url('assets/room-16.jpg')" role="img" aria-label="Pairadise 16, Sunset Pond View Superior LUX bungalow"></div>
+            <div class="room-body">
+              <h3>Pairadise 16</h3>
+              <p class="fit-tag">Pond View Superior LUX &middot; Couples or small groups</p>
+              <ul class="chips">
+                <li>3 guests</li><li>2 beds</li><li>AC</li><li>Private bathroom</li><li>WiFi</li><li>Pond view</li><li>LUX</li>
+              </ul>
+              <div class="room-actions">
+                <a class="btn btn-primary" href="https://pairadise.lodgify.com/en/pairadise-16-sunset-pond-view-superior-lux" target="_blank" rel="noopener noreferrer">Check Availability &amp; Book</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. AMENITIES
+         ============================================================ -->
+    <section class="section section-forest" id="amenities">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow-gold">A gentle Pai retreat</p>
+          <h2>More than a room</h2>
+          <p class="section-lede section-lede-light">Small touches that make a stay feel restful, on-site and steps from your door.</p>
+        </div>
+
+        <div class="amenity-grid">
+          <article class="amenity-card">
+            <span class="amenity-icon" aria-hidden="true">&#9832;</span>
+            <h3>Acoustic Herbal Steam Sauna</h3>
+            <p>Unwind in our herbal steam room: warm, fragrant, and quietly restorative.</p>
+          </article>
+          <article class="amenity-card">
+            <span class="amenity-icon" aria-hidden="true">&#9851;</span>
+            <h3>Natural mountain water pool</h3>
+            <p>Cool off in a pool fed by fresh mountain water, framed by garden and sky.</p>
+          </article>
+          <article class="amenity-card">
+            <span class="amenity-icon" aria-hidden="true">&#10047;</span>
+            <h3>Massage spa on site</h3>
+            <p>Book a traditional Thai or oil massage without ever leaving the grounds.</p>
+          </article>
+          <article class="amenity-card">
+            <span class="amenity-icon" aria-hidden="true">&#9834;</span>
+            <h3>Retreat &amp; dance space</h3>
+            <p>An open studio for movement, sound, yoga, and gatherings throughout the year.</p>
+          </article>
+          <article class="amenity-card">
+            <span class="amenity-icon" aria-hidden="true">&#9962;</span>
+            <h3>Terrace View Restaurant</h3>
+            <p>Slow breakfasts and easy meals with a view over the gardens and hills.</p>
+          </article>
+          <article class="amenity-card">
+            <span class="amenity-icon" aria-hidden="true">&#127807;</span>
+            <h3>Garden, pond &amp; sunset corners</h3>
+            <p>Quiet places to read, rest, or watch the day soften into evening.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FEATURE STRIP — Steam Sauna
+         ============================================================ -->
+    <section class="section section-sand feature-strip" id="sauna" aria-labelledby="sauna-title">
+      <div class="container feature-inner">
+        <!-- REPLACE: assets/sauna.jpg -->
+        <div class="feature-img" style="background-image:url('assets/sauna.jpg')" role="img" aria-label="Acoustic Herbal Steam Sauna at Pairadise Resort"></div>
+        <div class="feature-text">
+          <p class="eyebrow">Signature experience</p>
+          <h2 id="sauna-title">Acoustic Herbal Steam Sauna</h2>
+          <p>Breathe in fragrant herbal steam while soft acoustic sound settles your mind. It's our favourite way to unwind after a day exploring Pai: warm, quiet, and deeply restful.</p>
+          <p>Open to all guests during your stay, just a few steps from your bungalow.</p>
+          <!-- REPLACE: WhatsApp number -->
+          <a class="btn btn-primary" href="https://wa.me/66838755379" target="_blank" rel="noopener noreferrer">Ask us about sauna times</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. WHY GUESTS LOVE PAIRADISE (reviews)
+         ============================================================ -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Kind words</p>
+          <h2>Why guests love Pairadise</h2>
+        </div>
+
+        <div class="review-grid">
+          <figure class="card review-card">
+            <blockquote>"Beautiful location and the friendliest staff we met in Thailand."</blockquote>
+            <figcaption>Resort guest</figcaption>
+          </figure>
+          <figure class="card review-card">
+            <blockquote>"Away from the noise of walking street, but only a 10 minute walk away."</blockquote>
+            <figcaption>Resort guest</figcaption>
+          </figure>
+          <figure class="card review-card">
+            <blockquote>"The most beautiful place in Pai. We didn't want to leave."</blockquote>
+            <figcaption>Resort guest</figcaption>
+          </figure>
+          <figure class="card review-card">
+            <blockquote>"We loved our superior bungalow, with AC, a porch, and a hammock. So peaceful."</blockquote>
+            <figcaption>Resort guest</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. LOCATION
+         ============================================================ -->
+    <section class="section section-sand" id="location">
+      <div class="container location-inner">
+        <div class="location-text">
+          <p class="eyebrow">Where you'll be</p>
+          <h2>Quiet, but close to everything</h2>
+          <p>Pairadise sits in Baan Mae Yen, just outside the heart of Pai. You're tucked into gardens, mountain views, and natural water, yet only a <strong>10-15 minute walk</strong> or a short scooter ride to Pai walking street, cafes, and night market.</p>
+          <p>It's the best of both: peaceful sleep at night, and the buzz of town whenever you want it.</p>
+          <div class="location-actions">
+            <!-- REPLACE: Google Maps link with your resort's place URL -->
+            <a class="btn btn-primary" href="https://maps.google.com/?q=Pairadise+Resort+Pai" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+            <!-- REPLACE: Apple Maps link with your resort's place URL -->
+            <a class="btn btn-soft" href="https://maps.apple.com/?q=Pairadise+Resort+Pai" target="_blank" rel="noopener noreferrer">Open in Apple Maps</a>
+          </div>
+        </div>
+        <!-- REPLACE: assets/location.jpg (map snapshot or scenic photo) -->
+        <div class="location-img" style="background-image:url('assets/location.jpg')" role="img" aria-label="Map area around Pairadise Resort in Pai"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         7. FAQ PREVIEW (accordion)
+         ============================================================ -->
+    <section class="section" id="faq">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <p class="eyebrow">Good to know</p>
+          <h2>Frequently asked questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What time is check-in and check-out?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Check-in is from 2:00 PM and check-out is by 11:00 AM. Early check-in or late check-out may be possible on request. Just message us.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is WiFi available?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, high-speed WiFi is included free in every room and across the resort grounds.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do rooms have AC?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Every bungalow and room has air conditioning, along with a private bathroom.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is there parking?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, free on-site parking is available for cars and scooters.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you offer breakfast or food?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Our Terrace View Restaurant serves breakfast and light meals with a view over the gardens. There are also many cafes and restaurants a short walk away in Pai.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       8. FOOTER / CONTACT
+       ============================================================ -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <img src="assets/pairadise-logo.png" alt="Pairadise Resort" class="footer-logo" />
+        <p class="footer-tag">Peaceful bungalows in Pai, surrounded by water, mountains, and garden calm.</p>
+        <!-- REPLACE: WhatsApp number -->
+        <a class="btn btn-primary" href="https://wa.me/66838755379" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <ul class="footer-contact">
+          <li><a href="tel:+66838755379">+66-83-875-5379</a> <span class="muted">(outside Thailand)</span></li>
+          <li><a href="tel:0838755379">083-875-5379</a> <span class="muted">(inside Thailand)</span></li>
+          <li><a href="mailto:management.pairadise@gmail.com">management.pairadise@gmail.com</a></li>
+        </ul>
+        <address class="footer-address">
+          98 Moo 1, Baan Mae Yen,<br />
+          Mae Hee, Pai, Mae Hong Son, 58130
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <h3>Explore</h3>
+        <ul class="footer-nav">
+          <li><a href="#rooms">Rooms</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <!-- REPLACE: booking link → Lodgify -->
+          <li><a href="https://pairadise.lodgify.com" target="_blank" rel="noopener noreferrer">Book Now</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bar">
+      <p>Pairadise Resort, Pai, Thailand</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
