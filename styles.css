@@ -397,6 +397,49 @@ a:focus-visible, button:focus-visible {
 .amenity-card p { color: rgba(242,238,225,0.8); font-size: 0.98rem; }
 
 /* ============================================================
+   ABOUT
+   ============================================================ */
+.about-lead {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: var(--forest);
+  border-left: 3px solid var(--gold);
+  padding-left: 20px;
+  margin-bottom: 28px;
+}
+.about-block {
+  background: var(--cream-card);
+  border-radius: 12px;
+  padding: 32px 36px;
+  margin: 32px 0;
+}
+.about-block > .eyebrow { margin-bottom: 10px; }
+.about-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 20px 0 24px;
+}
+.about-pillar {
+  background: var(--cream);
+  border-radius: 8px;
+  padding: 18px 20px;
+  border-top: 2px solid var(--gold);
+}
+.about-pillar strong {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--forest);
+  margin-bottom: 6px;
+}
+.about-pillar p { font-size: 0.95rem; color: var(--ink-soft); margin: 0; }
+.about-chips { margin: 20px 0 24px; }
+
+/* ============================================================
    5. REVIEWS
    ============================================================ */
 .review-grid {

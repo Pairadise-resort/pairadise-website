@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pairadise Resort | Peaceful Bungalows in Pai, Thailand</title>
+  <meta name="description" content="Quiet, natural bungalows in Pai, Thailand, surrounded by water, mountains, and garden calm. Just a 10-15 minute walk from Pai walking street. Check rooms and book your stay." />
+
+  <!-- ============================================================
+       REPLACE: Favicon lives at assets/pairadise-logo.png
+       ============================================================ -->
+  <link rel="icon" type="image/png" href="assets/pairadise-logo.png" />
+
+  <!-- Google Fonts: Playfair Display (headings), Spectral (body), Montserrat (UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Spectral:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Skip link for keyboard / screen-reader users -->
+  <a class="skip-link" href="#rooms">Skip to rooms</a>
+
+  <!-- ============================================================
+       1. STICKY HEADER
+       ============================================================ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Pairadise Resort home">
+        <!-- REPLACE: brand logo at assets/pairadise-logo.png -->
+        <img src="assets/pairadise-logo.png" alt="Pairadise Resort" class="brand-logo" />
+        <span class="brand-name">Pairadise<span class="brand-sub">Resort &middot; Pai</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="index.html#rooms">Rooms</a></li>
+          <li><a href="index.html#amenities">Amenities</a></li>
+          <li><a href="register-interest.html">Retreats</a></li>
+          <li><a href="index.html#location">Location</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="#">Happenings</a></li>
+        </ul>
+      </nav>
+
+      <!-- REPLACE: booking link → currently Lodgify -->
+      <a class="btn btn-primary header-cta" href="https://pairadise.lodgify.com" target="_blank" rel="noopener noreferrer">Book Now</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         ABOUT — Habit Hacking Hotel
+         ============================================================ -->
+    <section class="section" id="about">
+      <div class="container container-narrow">
+
+        <div class="section-head">
+          <p class="eyebrow eyebrow-gold">Our philosophy</p>
+          <h2>Pairadise: A Habit Hacking Hotel</h2>
+        </div>
+
+        <p class="about-lead">Pairadise is an experimental Habit Hacking Hotel. Rather than viewing a hotel simply as a place to sleep, we see it as one of the world's most powerful controlled environments for designing and testing human transformation systems. Every bungalow becomes a living laboratory where behavioral interventions can be prototyped, measured, refined, and experienced.</p>
+
+        <p>Our mission is to discover how intelligently designed environments can help people become healthier, happier, more connected, and more fulfilled. Instead of asking people to work harder, we redesign the environment so that healthy choices become the easiest choices.</p>
+
+        <div class="about-block">
+          <p class="eyebrow">Our Approach</p>
+          <p>At Pairadise, we develop and test behavioral products, experiences, and environmental interventions that are:</p>
+          <div class="about-pillars">
+            <div class="about-pillar">
+              <strong>Just-in-time</strong>
+              <p>Delivered exactly when they are most effective.</p>
+            </div>
+            <div class="about-pillar">
+              <strong>Behaviorally intelligent</strong>
+              <p>Grounded in evidence from behavioral science.</p>
+            </div>
+            <div class="about-pillar">
+              <strong>Subtly guided</strong>
+              <p>Gently influencing behavior without creating resistance.</p>
+            </div>
+            <div class="about-pillar">
+              <strong>Playful and gamified</strong>
+              <p>Making personal growth enjoyable rather than burdensome.</p>
+            </div>
+          </div>
+          <p>Every guest becomes part of a real-world habit hacking experiment. Every stay helps us improve the next generation of human transformation systems.</p>
+        </div>
+
+        <div class="about-block">
+          <p class="eyebrow">Effortless Transformation</p>
+          <p>Our goal is simple: To hack habits so healthy behavior becomes the path of least resistance. We call this <strong>Effortless Transformation</strong>.</p>
+          <p>Instead of relying on discipline, motivation, or willpower, we design systems that naturally guide people toward healthier behaviors through thoughtful environmental design. When beneficial habits become automatic, people no longer need to spend mental energy making the same decisions every day. That cognitive capacity becomes available for what truly matters:</p>
+          <ul class="chips about-chips">
+            <li>Creativity</li>
+            <li>Presence</li>
+            <li>Meaningful relationships</li>
+            <li>Purpose</li>
+            <li>Deep thinking</li>
+          </ul>
+          <p>In an age increasingly shaped by artificial intelligence, human attention and conscious awareness become our most valuable resources.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. LOCATION
+         ============================================================ -->
+    <section class="section section-sand" id="location">
+      <div class="container location-inner">
+        <div class="location-text">
+          <p class="eyebrow">Where you'll be</p>
+          <h2>Quiet, but close to everything</h2>
+          <p>Pairadise sits in Baan Mae Yen, just outside the heart of Pai. You're tucked into gardens, mountain views, and natural water, yet only a <strong>10-15 minute walk</strong> or a short scooter ride to Pai walking street, cafes, and night market.</p>
+          <p>It's the best of both: peaceful sleep at night, and the buzz of town whenever you want it.</p>
+          <div class="location-actions">
+            <!-- REPLACE: Google Maps link with your resort's place URL -->
+            <a class="btn btn-primary" href="https://maps.google.com/?q=Pairadise+Resort+Pai" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+            <!-- REPLACE: Apple Maps link with your resort's place URL -->
+            <a class="btn btn-soft" href="https://maps.apple.com/?q=Pairadise+Resort+Pai" target="_blank" rel="noopener noreferrer">Open in Apple Maps</a>
+          </div>
+        </div>
+        <!-- REPLACE: assets/location.jpg (map snapshot or scenic photo) -->
+        <div class="location-img" style="background-image:url('assets/location.jpg')" role="img" aria-label="Map area around Pairadise Resort in Pai"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         7. FAQ PREVIEW (accordion)
+         ============================================================ -->
+    <section class="section" id="faq">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <p class="eyebrow">Good to know</p>
+          <h2>Frequently asked questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What time is check-in and check-out?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Check-in is from 2:00 PM and check-out is by 11:00 AM. Early check-in or late check-out may be possible on request. Just message us.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is WiFi available?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, high-speed WiFi is included free in every room and across the resort grounds.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do rooms have AC?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Every bungalow and room has air conditioning, along with a private bathroom.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is there parking?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, free on-site parking is available for cars and scooters.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you offer breakfast or food?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Our Terrace View Restaurant serves breakfast and light meals with a view over the gardens. There are also many cafes and restaurants a short walk away in Pai.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       8. FOOTER / CONTACT
+       ============================================================ -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <img src="assets/pairadise-logo.png" alt="Pairadise Resort" class="footer-logo" />
+        <p class="footer-tag">Peaceful bungalows in Pai, surrounded by water, mountains, and garden calm.</p>
+        <!-- REPLACE: WhatsApp number -->
+        <a class="btn btn-primary" href="https://wa.me/66838755379" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <ul class="footer-contact">
+          <li><a href="tel:+66838755379">+66-83-875-5379</a> <span class="muted">(outside Thailand)</span></li>
+          <li><a href="tel:0838755379">083-875-5379</a> <span class="muted">(inside Thailand)</span></li>
+          <li><a href="mailto:management.pairadise@gmail.com">management.pairadise@gmail.com</a></li>
+        </ul>
+        <address class="footer-address">
+          98 Moo 1, Baan Mae Yen,<br />
+          Mae Hee, Pai, Mae Hong Son, 58130
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <h3>Explore</h3>
+        <ul class="footer-nav">
+          <li><a href="#rooms">Rooms</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <!-- REPLACE: booking link → Lodgify -->
+          <li><a href="https://pairadise.lodgify.com" target="_blank" rel="noopener noreferrer">Book Now</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="container footer-links">
+      <a class="btn btn-soft" href="https://maps.app.goo.gl/sPkQn3jfHHbMvxtm8" target="_blank" rel="noopener noreferrer">📍 Location</a>
+      <a class="btn btn-soft" href="https://maps.app.goo.gl/kFynA8NW3NiVCLh39" target="_blank" rel="noopener noreferrer">♨️ Herbal Steam Sauna &amp; Natural Pool</a>
+      <a class="btn btn-soft" href="https://www.instagram.com/pairadise.resort/" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+      <a class="btn btn-soft" href="tel:+66838755379">📞 +66 83 875 5379</a>
+      <a class="btn btn-soft" href="mailto:management@hummingbirdhabit.com">📧 Email</a>
+    </div>
+
+    <div class="footer-bar">
+      <p>Pairadise Resort, Pai, Thailand</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
