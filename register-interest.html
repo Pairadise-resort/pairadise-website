@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Spectral:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
   <style>
     :root {
       --forest:        #1E4738;
@@ -56,16 +57,7 @@
     }
 
     /* HEADER / LOGO */
-    .site-head {
-      background: #fff;
-      padding: 22px 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .site-head img { height: 96px; width: auto; }
-
-    /* HERO */
+/* HERO */
     .hero {
       background: var(--forest);
       color: var(--cream);
@@ -267,8 +259,34 @@
 <body>
 
   <!-- HEADER -->
-  <header class="site-head">
-    <img src="assets/pairadise-logo.png" alt="Pairadise Resort" />
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Pairadise Resort home">
+        <img src="assets/pairadise-logo.png" alt="Pairadise Resort" class="brand-logo" />
+        <span class="brand-name">Pairadise<span class="brand-sub">Resort &middot; Pai</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="index.html#rooms">Rooms</a></li>
+          <li><a href="index.html#amenities">Amenities</a></li>
+          <li><a href="register-interest.html">Retreats</a></li>
+          <li><a href="index.html#location">Location</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="#">Happenings</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-primary header-cta" href="https://pairadise.lodgify.com" target="_blank" rel="noopener noreferrer">Book Now</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+    </div>
   </header>
 
   <!-- HERO -->
@@ -395,6 +413,7 @@
       });
     })();
   </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
