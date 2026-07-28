@@ -24,6 +24,31 @@
        inlined here. Feel free to move these into styles.css instead.
        ============================================================ -->
   <style>
+    .room-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 32px 0 40px;
+    }
+    .room-photo-grid img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .room-photo-grid img:hover {
+      transform: scale(1.03);
+    }
+    @media (max-width: 900px) {
+      .room-photo-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .room-photo-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    }
+
     .booking-cta {
       display: flex;
       flex-direction: column;
@@ -221,6 +246,24 @@
         <div class="section-head">
           <h2>Find your bungalow</h2>
           <p class="section-lede">Every room is its own private bungalow with AC, a private bathroom, and high-speed WiFi. Browse all 15 rooms and book directly on our availability page.</p>
+        </div>
+
+        <!-- ============================================================
+             ROOM PHOTO GRID
+             A visual preview of the bungalows. Uses the existing
+             assets/room-01.jpg .. room-16.jpg files (unit 13 skipped,
+             same as the original room listing). Swap any src to feature
+             different units or photos.
+             ============================================================ -->
+        <div class="room-photo-grid">
+          <img src="assets/room-01.jpg" alt="Pond View Superior bungalow at Pairadise Resort" loading="lazy" />
+          <img src="assets/room-07.jpg" alt="Garden View Superior bungalow at Pairadise Resort" loading="lazy" />
+          <img src="assets/room-09.jpg" alt="Garden View Superior LUX bungalow at Pairadise Resort" loading="lazy" />
+          <img src="assets/room-10.jpg" alt="Family Studio Superior LUX bungalow at Pairadise Resort" loading="lazy" />
+          <img src="assets/room-11.jpg" alt="Pond View Superior LUX bungalow at Pairadise Resort" loading="lazy" />
+          <img src="assets/room-04.jpg" alt="Pond View Superior bungalow interior at Pairadise Resort" loading="lazy" />
+          <img src="assets/room-16.jpg" alt="Pond View Superior LUX bungalow at Pairadise Resort" loading="lazy" />
+          <img src="assets/room-08.jpg" alt="Garden View Superior bungalow at Pairadise Resort" loading="lazy" />
         </div>
 
         <!-- ============================================================
