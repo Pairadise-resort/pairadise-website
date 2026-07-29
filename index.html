@@ -49,6 +49,27 @@
       .room-photo-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
     }
 
+    .review-stars {
+      color: #c9a05c;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    .review-source-link {
+      text-align: center;
+      margin-top: 28px;
+    }
+    .review-source-link a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #8a7550;
+    }
+    .review-source-link a:hover {
+      text-decoration: underline;
+    }
+
     .booking-cta {
       display: flex;
       flex-direction: column;
@@ -388,26 +409,45 @@
         <div class="section-head">
           <p class="eyebrow">Kind words</p>
           <h2>Why guests love Pairadise</h2>
+          <p class="section-lede">Rated 4.6 out of 5 from over 230 Google reviews.</p>
         </div>
 
         <div class="review-grid">
           <figure class="card review-card">
-            <blockquote>"Beautiful location and the friendliest staff we met in Thailand."</blockquote>
-            <figcaption>Resort guest</figcaption>
+            <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>About a 15-minute walk from town, so it's peaceful without being cut off. The views from the on-site cafe are stunning, and there's a fish pond to feed plus a spring-fed pool. Staff even decorated our room for a late check-in, a lovely touch.</blockquote>
+            <figcaption>Lucy G. &middot; Google review, Nov 2025</figcaption>
           </figure>
           <figure class="card review-card">
-            <blockquote>"Away from the noise of walking street, but only a 10 minute walk away."</blockquote>
-            <figcaption>Resort guest</figcaption>
+            <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>Recommended by a local friend, and every detail lived up to it. The room was spotless and cozy, the staff greeted us warmly each morning, and arranging a motorbike took minutes. The natural pool and the views made it hard to leave.</blockquote>
+            <figcaption>Tom G. &middot; Google review, Dec 2025</figcaption>
           </figure>
           <figure class="card review-card">
-            <blockquote>"The most beautiful place in Pai. We didn't want to leave."</blockquote>
-            <figcaption>Resort guest</figcaption>
+            <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>This felt less like a hotel stay and more like a personal development retreat. The team went out of their way with small touches, extra shelving, a heater for early yoga mornings, fresh ginger tea always on hand. Every cabin looks out over a lake full of fish, oriented perfectly for sunset.</blockquote>
+            <figcaption>Rotem Z. &middot; Google review, Dec 2025</figcaption>
           </figure>
           <figure class="card review-card">
-            <blockquote>"We loved our superior bungalow, with AC, a porch, and a hammock. So peaceful."</blockquote>
-            <figcaption>Resort guest</figcaption>
+            <div class="review-stars" aria-label="4 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            <blockquote>Pai itself felt loud and crowded at first, but moving here changed that completely. The grounds are beautifully designed, with lovely terrace views at breakfast and sunset, and the little welcome touches were a nice surprise.</blockquote>
+            <figcaption>C. R. &middot; Google review, Jan 2026</figcaption>
+          </figure>
+          <figure class="card review-card">
+            <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>A beautiful, thoughtfully decorated bungalow with stunning rural views and a lovely bathroom. The staff were wonderful and the breakfast was excellent. It feels wonderfully quiet and relaxing, yet still close enough to Pai to enjoy both.</blockquote>
+            <figcaption>James W. &middot; Google review, Jan 2026</figcaption>
+          </figure>
+          <figure class="card review-card">
+            <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>A charming spot right on the edge of Pai Valley, overlooking a natural lake. The bungalows are spacious with gold-leaf lotus murals and terraces built for a hammock. WiFi coverage across the resort held up well throughout our stay.</blockquote>
+            <figcaption>Ewelina S. &middot; Google review, Aug 2025</figcaption>
           </figure>
         </div>
+
+        <p class="review-source-link">
+          <a href="https://www.google.com/maps/place/@19.359085,98.448658,17z/data=!4m10!3m9!1s0x30da803034c4b1a5:0xb52c983ed6b964e!5m2!4m1!1i2!8m2!3d19.359085!4d98.448658!9m1!1b1" target="_blank" rel="noopener noreferrer">Read all reviews on Google &rarr;</a>
+        </p>
       </div>
     </section>
 
