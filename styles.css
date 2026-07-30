@@ -5,9 +5,19 @@
 
 :root {
   /* Brand palette (shared with the rest of the Pairadise site) */
-  --forest:        #1E4738;
-  --forest-deep:   #163A2D;
-  --forest-soft:   #2A5A47;
+  /* Color identity update: forest green -> orange, per the logo's
+     accent color #FD8139. --forest is now the bright primary orange
+     used for large surfaces (section backgrounds, buttons, icons).
+     --forest-text is a new, darker orange derived from it, used
+     anywhere --forest previously served as TEXT on a light background
+     (headings, nav hover, etc), since the bright orange alone doesn't
+     have enough contrast for body-sized text. --on-orange is new too:
+     dark, near-black text for use on top of the bright --forest fill. */
+  --forest:        #FD8139;
+  --forest-text:   #8B3A14;
+  --forest-deep:   #4A2210;
+  --forest-soft:   #6B3618;
+  --on-orange:     #1C1C1C;
   --cream:         #F2EEE1;
   --cream-card:    #FBFAF2;
   --sand:          #EAE2CF;
@@ -27,8 +37,8 @@
   --container: 1140px;
   --radius:    16px;
   --radius-sm: 10px;
-  --shadow:    0 14px 40px rgba(22,58,45,0.10);
-  --shadow-sm: 0 6px 18px rgba(22,58,45,0.08);
+  --shadow:    0 14px 40px rgba(74,34,16,0.10);
+  --shadow-sm: 0 6px 18px rgba(74,34,16,0.08);
   --header-h:  74px;
 }
 
@@ -71,7 +81,7 @@ ul { list-style: none; }
 }
 .eyebrow-gold { color: var(--gold); }
 
-h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; color: var(--forest); }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; color: var(--forest-text); }
 
 /* Skip link (accessibility) */
 .skip-link {
@@ -79,7 +89,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   left: -999px;
   top: 0;
   background: var(--forest);
-  color: var(--cream);
+  color: var(--on-orange);
   padding: 12px 18px;
   z-index: 1000;
   font-family: var(--font-ui);
@@ -111,7 +121,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .btn-primary { background: var(--terracotta); color: #fff; }
 .btn-primary:hover { background: var(--terracotta-dk); }
 
-.btn-soft { background: var(--sand); color: var(--forest); border-color: var(--line); }
+.btn-soft { background: var(--sand); color: var(--forest-text); border-color: var(--line); }
 .btn-soft:hover { background: var(--cream); border-color: var(--forest-soft); }
 
 .btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,0.7); }
@@ -149,7 +159,7 @@ a:focus-visible, button:focus-visible {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.25rem;
-  color: var(--forest);
+  color: var(--forest-text);
   line-height: 1.05;
 }
 .brand-sub {
@@ -180,7 +190,7 @@ a:focus-visible, button:focus-visible {
   background: var(--terracotta);
   transition: width 0.2s;
 }
-.nav-list a:hover { color: var(--forest); }
+.nav-list a:hover { color: var(--forest-text); }
 .nav-list a:hover::after { width: 100%; }
 
 /* "Retreats (coming soon)" nav item */
@@ -219,7 +229,7 @@ a:focus-visible, button:focus-visible {
 .menu-bar {
   display: block;
   width: 24px; height: 2px;
-  background: var(--forest);
+  background: var(--forest-text);
   border-radius: 2px;
   transition: transform 0.25s, opacity 0.2s;
 }
@@ -248,7 +258,7 @@ a:focus-visible, button:focus-visible {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(22,58,45,0.35) 0%, rgba(22,58,45,0.62) 100%);
+  background: linear-gradient(180deg, rgba(74,34,16,0.35) 0%, rgba(74,34,16,0.62) 100%);
   z-index: 1;
 }
 .hero-content { position: relative; z-index: 2; max-width: 720px; }
@@ -308,15 +318,15 @@ a:focus-visible, button:focus-visible {
    Section scaffolding
    ============================================================ */
 .section { padding: clamp(56px, 9vw, 96px) 0; }
-.section-forest { background: var(--forest); color: var(--cream); }
-.section-sand { background: var(--sand); }
+.section-forest { background: var(--forest); color: var(--on-orange); }
+.section-sand { background: #fff; }
 
 .section-head { max-width: 640px; margin: 0 auto 48px; text-align: center; }
 .section-head .eyebrow { display: block; margin-bottom: 12px; }
 .section-head h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 14px; }
-.section-forest .section-head h2 { color: var(--cream); }
+.section-forest .section-head h2 { color: var(--on-orange); }
 .section-lede { color: var(--ink-soft); font-size: 1.08rem; }
-.section-lede-light { color: rgba(242,238,225,0.82); }
+.section-lede-light { color: rgba(28,28,28,0.75); }
 
 .card {
   background: var(--cream-card);
@@ -381,7 +391,7 @@ a:focus-visible, button:focus-visible {
   padding: 30px 26px;
   transition: transform 0.2s, background 0.2s;
 }
-.amenity-card:hover { transform: translateY(-4px); background: #2F6450; }
+.amenity-card:hover { transform: translateY(-4px); background: #7C4020; }
 .amenity-icon {
   display: inline-flex;
   align-items: center;
@@ -402,7 +412,7 @@ a:focus-visible, button:focus-visible {
 .about-lead {
   font-size: 1.15rem;
   line-height: 1.75;
-  color: var(--forest);
+  color: var(--forest-text);
   border-left: 3px solid var(--gold);
   padding-left: 20px;
   margin-bottom: 28px;
@@ -433,7 +443,7 @@ a:focus-visible, button:focus-visible {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--forest);
+  color: var(--forest-text);
   margin-bottom: 6px;
 }
 .about-pillar p { font-size: 0.95rem; color: var(--ink-soft); margin: 0; }
@@ -453,7 +463,7 @@ a:focus-visible, button:focus-visible {
   font-style: italic;
   font-size: 1.22rem;
   line-height: 1.5;
-  color: var(--forest);
+  color: var(--forest-text);
   margin-bottom: 16px;
 }
 .review-card blockquote::before { content: '“'; color: var(--gold); font-size: 1.4em; line-height: 0; vertical-align: -0.3em; margin-right: 2px; }
@@ -535,7 +545,7 @@ a:focus-visible, button:focus-visible {
   font-family: var(--font-display);
   font-size: 1.12rem;
   font-weight: 600;
-  color: var(--forest);
+  color: var(--forest-text);
 }
 .faq-question:hover { color: var(--terracotta); }
 .faq-icon {
