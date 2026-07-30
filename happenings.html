@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happenings | Pairadise Resort</title>
+  <meta name="description" content="What's on this month at Pairadise Resort in Pai: Sunday Vegan Brunch with a live music jam, our Full Moon Gathering with bonfire and music, and updates on our new geodesic dance hall and weaver-bird-inspired build." />
+
+  <!-- ============================================================
+       REPLACE: Favicon lives at assets/pairadise-logo.png
+       ============================================================ -->
+  <link rel="icon" type="image/png" href="assets/pairadise-logo.png" />
+
+  <!-- Google Fonts: Playfair Display (headings), Spectral (body), Montserrat (UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Spectral:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ============================================================
+       Layout rules for the Happenings hero and photo placeholders.
+       Not covered by styles.css, so it's inlined here. Feel free
+       to move this into styles.css instead.
+       ============================================================ -->
+  <style>
+    .about-status-hero {
+      text-align: center;
+      padding-top: 64px;
+      padding-bottom: 8px;
+    }
+    .about-status-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 600;
+      line-height: 1.25;
+      margin: 10px 0 16px;
+    }
+    .about-status-note {
+      font-family: 'Spectral', serif;
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: #5a5a5a;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .about-block h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin: 6px 0 14px;
+    }
+
+    .happenings-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .happenings-photo-placeholder {
+      aspect-ratio: 4 / 3;
+      border: 1.5px dashed #d7d0c0;
+      border-radius: 12px;
+      background: #faf8f3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #b0a68f;
+    }
+    @media (max-width: 900px) {
+      .happenings-photo-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip link for keyboard / screen-reader users -->
+  <a class="skip-link" href="#happenings">Skip to happenings</a>
+
+  <!-- ============================================================
+       1. STICKY HEADER
+       ============================================================ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Pairadise Resort home">
+        <!-- REPLACE: brand logo at assets/pairadise-logo.png -->
+        <img src="assets/pairadise-logo.png" alt="Pairadise Resort" class="brand-logo" />
+        <span class="brand-name">Pairadise<span class="brand-sub">Resort &middot; Pai</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="index.html#rooms">Rooms</a></li>
+          <li><a href="index.html#amenities">Amenities</a></li>
+          <li><a href="register-interest.html">Retreats</a></li>
+          <li><a href="index.html#location">Location</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="happenings.html">Happenings</a></li>
+        </ul>
+      </nav>
+
+      <!-- REPLACE: booking link → currently Lodgify -->
+      <a class="btn btn-primary header-cta" href="https://pairadise.lodgify.com" target="_blank" rel="noopener noreferrer">Book Now</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HAPPENINGS HERO
+         ============================================================ -->
+    <section class="section about-status-hero">
+      <div class="container container-narrow">
+        <p class="eyebrow eyebrow-gold">This month at Pairadise</p>
+        <h1>Happenings</h1>
+        <p class="about-status-note">Pairadise is more than a place to sleep, it's a place to gather. Here's what's on this month, from Sunday brunch to full moon nights, plus a look at what we're building next.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HAPPENINGS: Sunday Vegan Brunch & Music Jam
+         ============================================================ -->
+    <section class="section" id="happenings">
+      <div class="container container-narrow">
+
+        <div class="about-block">
+          <p class="eyebrow eyebrow-gold">Every Sunday</p>
+          <h2>Vegan Brunch &amp; Music Jam</h2>
+          <p class="about-lead">Join us for a relaxed community morning: a vegan buffet, good company, and an open music jam. Come as a guest, come as a listener, or come with an instrument and join the circle.</p>
+
+          <div class="about-pillars">
+            <div class="about-pillar">
+              <strong>When</strong>
+              <p>Every Sunday, 11:11 AM &ndash; 3:15 PM</p>
+            </div>
+            <div class="about-pillar">
+              <strong>What</strong>
+              <p>Vegan buffet lunch with a live, open music jam</p>
+            </div>
+            <div class="about-pillar">
+              <strong>Price</strong>
+              <p>99 THB per person</p>
+            </div>
+            <div class="about-pillar">
+              <strong>Bring an instrument</strong>
+              <p>Play with us and your lunch is on the house</p>
+            </div>
+          </div>
+
+          <p>Every lunch ticket also enters you into our lucky draw, with a chance to win small prizes or a discount on your next lunch with us. All are welcome, whether you're staying at Pairadise or just visiting for the day.</p>
+        </div>
+
+        <!-- ============================================================
+             HAPPENINGS: Full Moon Gathering
+             ============================================================ -->
+        <div class="about-block">
+          <p class="eyebrow eyebrow-gold">Every full moon, after dark</p>
+          <h2>Full Moon Gathering</h2>
+          <p>We gather every full moon for an evening around the fire, with an open music jam and a bonfire that runs late into the night. It's an easy, unplugged night of shared songs, good conversation, and community.</p>
+          <p>This month, we're hosting a family visiting from China, whose musically-inspired kids joined right in on a live jam session. It's exactly the kind of spontaneous, cross-cultural moment this gathering is built for, come see who shows up next.</p>
+
+          <!-- ============================================================
+               PLACEHOLDER IMAGES: swap these for real photos from the
+               Full Moon Gathering once you have them. Currently styled
+               placeholder boxes, not broken image links.
+               ============================================================ -->
+          <div class="happenings-photo-grid">
+            <div class="happenings-photo-placeholder" role="img" aria-label="Photo placeholder: Full Moon Gathering">Add photo</div>
+            <div class="happenings-photo-placeholder" role="img" aria-label="Photo placeholder: Full Moon Gathering">Add photo</div>
+            <div class="happenings-photo-placeholder" role="img" aria-label="Photo placeholder: Full Moon Gathering">Add photo</div>
+            <div class="happenings-photo-placeholder" role="img" aria-label="Photo placeholder: Full Moon Gathering">Add photo</div>
+          </div>
+        </div>
+
+        <!-- ============================================================
+             HAPPENINGS: What We're Building
+             ============================================================ -->
+        <div class="about-block">
+          <p class="eyebrow eyebrow-gold">Under construction</p>
+          <h2>What We're Building</h2>
+          <p>We're currently building a new dance hall and workshop space: a geodesic dome designed to host movement classes, workshops, and gatherings of its own. We're excited to get it finished and open it up to guests.</p>
+          <p>Alongside it, we're working on a second structure built from natural materials, inspired by the weaver birds who've made their own community right here at the resort. Their woven, communal nests are the starting point for the design.</p>
+          <p>We're excited to share our progress as it happens. If you're curious about either build, just ask us, we're happy to set up a VR simulation so you can walk through the construction before it's finished.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. LOCATION
+         ============================================================ -->
+    <section class="section section-sand" id="location">
+      <div class="container location-inner">
+        <div class="location-text">
+          <p class="eyebrow">Where you'll be</p>
+          <h2>Quiet, but close to everything</h2>
+          <p>Pairadise sits in Baan Mae Yen, just outside the heart of Pai. You're tucked into gardens, mountain views, and natural water, yet only a <strong>10-15 minute walk</strong> or a short scooter ride to Pai walking street, cafes, and night market.</p>
+          <p>It's the best of both: peaceful sleep at night, and the buzz of town whenever you want it.</p>
+          <div class="location-actions">
+            <!-- REPLACE: Google Maps link with your resort's place URL -->
+            <a class="btn btn-primary" href="https://maps.google.com/?q=Pairadise+Resort+Pai" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+            <!-- REPLACE: Apple Maps link with your resort's place URL -->
+            <a class="btn btn-soft" href="https://maps.apple.com/?q=Pairadise+Resort+Pai" target="_blank" rel="noopener noreferrer">Open in Apple Maps</a>
+          </div>
+        </div>
+        <!-- REPLACE: assets/location.jpg (map snapshot or scenic photo) -->
+        <div class="location-img" style="background-image:url('assets/location.jpg')" role="img" aria-label="Map area around Pairadise Resort in Pai"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         7. FAQ PREVIEW (accordion)
+         ============================================================ -->
+    <section class="section" id="faq">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <p class="eyebrow">Good to know</p>
+          <h2>Frequently asked questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What time is check-in and check-out?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Check-in is from 2:00 PM and check-out is by 11:00 AM. Early check-in or late check-out may be possible on request. Just message us.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is WiFi available?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, high-speed WiFi is included free in every room and across the resort grounds.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do rooms have AC?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Every bungalow and room has air conditioning, along with a private bathroom.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is there parking?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, free on-site parking is available for cars and scooters.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you offer breakfast or food?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Our Terrace View Restaurant serves breakfast and light meals with a view over the gardens. There are also many cafes and restaurants a short walk away in Pai.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       8. FOOTER / CONTACT
+       ============================================================ -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <img src="assets/pairadise-logo.png" alt="Pairadise Resort" class="footer-logo" />
+        <p class="footer-tag">Peaceful bungalows in Pai, surrounded by water, mountains, and garden calm.</p>
+        <!-- REPLACE: WhatsApp number -->
+        <a class="btn btn-primary" href="https://wa.me/66838755379" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <ul class="footer-contact">
+          <li><a href="tel:+66838755379">+66-83-875-5379</a> <span class="muted">(outside Thailand)</span></li>
+          <li><a href="tel:0838755379">083-875-5379</a> <span class="muted">(inside Thailand)</span></li>
+          <li><a href="mailto:management.pairadise@gmail.com">management.pairadise@gmail.com</a></li>
+        </ul>
+        <address class="footer-address">
+          98 Moo 1, Baan Mae Yen,<br />
+          Mae Hee, Pai, Mae Hong Son, 58130
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <h3>Explore</h3>
+        <ul class="footer-nav">
+          <li><a href="#rooms">Rooms</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <!-- REPLACE: booking link → Lodgify -->
+          <li><a href="https://pairadise.lodgify.com" target="_blank" rel="noopener noreferrer">Book Now</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="container footer-links">
+      <a class="btn btn-soft" href="https://maps.app.goo.gl/sPkQn3jfHHbMvxtm8" target="_blank" rel="noopener noreferrer">📍 Location</a>
+      <a class="btn btn-soft" href="https://maps.app.goo.gl/kFynA8NW3NiVCLh39" target="_blank" rel="noopener noreferrer">♨️ Herbal Steam Sauna &amp; Natural Pool</a>
+      <a class="btn btn-soft" href="https://www.instagram.com/pairadise.resort/" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+      <a class="btn btn-soft" href="tel:+66838755379">📞 +66 83 875 5379</a>
+      <a class="btn btn-soft" href="mailto:management@hummingbirdhabit.com">📧 Email</a>
+    </div>
+
+    <div class="footer-bar">
+      <p>Pairadise Resort, Pai, Thailand</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
