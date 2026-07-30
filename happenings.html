@@ -58,20 +58,14 @@
       gap: 12px;
       margin-top: 20px;
     }
-    .happenings-photo-placeholder {
+    .happenings-photo {
+      width: 100%;
+      height: 100%;
       aspect-ratio: 4 / 3;
-      border: 1.5px dashed #d7d0c0;
+      object-fit: cover;
       border-radius: 12px;
+      display: block;
       background: #faf8f3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: #b0a68f;
     }
     @media (max-width: 900px) {
       .happenings-photo-grid { grid-template-columns: repeat(2, 1fr); }
@@ -179,10 +173,10 @@
                placeholder boxes, not broken image links.
                ============================================================ -->
           <div class="happenings-photo-grid">
-            <div class="happenings-photo-placeholder" role="img" aria-label="Photo placeholder: Full Moon Gathering">Add photo</div>
-            <div class="happenings-photo-placeholder" role="img" aria-label="Photo placeholder: Full Moon Gathering">Add photo</div>
-            <div class="happenings-photo-placeholder" role="img" aria-label="Photo placeholder: Full Moon Gathering">Add photo</div>
-            <div class="happenings-photo-placeholder" role="img" aria-label="Photo placeholder: Full Moon Gathering">Add photo</div>
+            <img class="happenings-photo" src="assets/happenings-fullmoon-01.jpg" alt="Full Moon Gathering at Pairadise Resort" loading="lazy" />
+            <img class="happenings-photo" src="assets/happenings-fullmoon-02.jpg" alt="Full Moon Gathering at Pairadise Resort" loading="lazy" />
+            <img class="happenings-photo" src="assets/happenings-fullmoon-03.jpg" alt="Full Moon Gathering at Pairadise Resort" loading="lazy" />
+            <img class="happenings-photo" src="assets/happenings-fullmoon-04.jpg" alt="Full Moon Gathering at Pairadise Resort" loading="lazy" />
           </div>
         </div>
 
@@ -202,10 +196,10 @@
                boxes, not broken image links.
                ============================================================ -->
           <div class="happenings-photo-grid">
-            <div class="happenings-photo-placeholder" role="img" aria-label="Photo placeholder: What We're Building">Add photo</div>
-            <div class="happenings-photo-placeholder" role="img" aria-label="Photo placeholder: What We're Building">Add photo</div>
-            <div class="happenings-photo-placeholder" role="img" aria-label="Photo placeholder: What We're Building">Add photo</div>
-            <div class="happenings-photo-placeholder" role="img" aria-label="Photo placeholder: What We're Building">Add photo</div>
+            <img class="happenings-photo" src="assets/happenings-building-01.jpg" alt="Progress photo: what we're building at Pairadise Resort" loading="lazy" />
+            <img class="happenings-photo" src="assets/happenings-building-02.jpg" alt="Progress photo: what we're building at Pairadise Resort" loading="lazy" />
+            <img class="happenings-photo" src="assets/happenings-building-03.jpg" alt="Progress photo: what we're building at Pairadise Resort" loading="lazy" />
+            <img class="happenings-photo" src="assets/happenings-building-04.jpg" alt="Progress photo: what we're building at Pairadise Resort" loading="lazy" />
           </div>
         </div>
 
