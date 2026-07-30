@@ -97,18 +97,28 @@
       margin: 0;
     }
 
-    .search-widget-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #8a7550;
-      margin: 32px 0 16px;
-      padding-top: 28px;
-      border-top: 1px solid #e6e0d4;
+    .search-widget-title-wrap {
       width: 100%;
       max-width: 620px;
+      margin: 32px 0 20px;
+      padding-top: 28px;
+      border-top: 1px solid #e6e0d4;
+      display: flex;
+      justify-content: center;
+    }
+    .search-widget-title {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #fff;
+      background: linear-gradient(135deg, #d3a75f, #9c7c46);
+      padding: 14px 30px;
+      border-radius: 999px;
+      box-shadow: 0 8px 20px rgba(154, 123, 68, 0.35);
+      margin: 0;
     }
 
     .search-widget {
@@ -299,7 +309,9 @@
             <p>Pond view, garden view, and family studio options, each with AC, a private bathroom, and high-speed WiFi. See real-time availability, photos, and rates for every room on our booking page.</p>
           </div>
 
-          <p class="search-widget-title">Check Availability &amp; Book Now</p>
+          <div class="search-widget-title-wrap">
+            <p class="search-widget-title">Check Availability &amp; Book Now</p>
+          </div>
 
           <!-- ============================================================
                AVAILABILITY SEARCH WIDGET
