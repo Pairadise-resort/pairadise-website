@@ -118,14 +118,14 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .btn:active { transform: translateY(1px); }
 .btn-lg { padding: 16px 32px; font-size: 0.86rem; }
 
-.btn-primary { background: var(--terracotta); color: #fff; }
-.btn-primary:hover { background: var(--terracotta-dk); }
+.btn-primary { background: var(--forest); color: #fff; }
+.btn-primary:hover { background: var(--forest-soft); }
 
 .btn-soft { background: var(--sand); color: var(--forest-text); border-color: var(--line); }
 .btn-soft:hover { background: var(--cream); border-color: var(--forest-soft); }
 
-.btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,0.7); }
-.btn-ghost:hover { background: rgba(255,255,255,0.14); border-color: #fff; }
+.btn-ghost { background: transparent; color: var(--forest); border-color: rgba(253,129,57,0.75); }
+.btn-ghost:hover { background: rgba(253,129,57,0.14); border-color: var(--forest); }
 
 /* Visible keyboard focus everywhere */
 a:focus-visible, button:focus-visible {
