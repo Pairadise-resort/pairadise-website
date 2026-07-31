@@ -531,7 +531,7 @@ a:focus-visible, button:focus-visible {
 .location-text p { color: var(--ink-soft); margin-bottom: 16px; }
 .location-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
 .location-img {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1402 / 1122;
   background: var(--cream-card) center/cover no-repeat;
   border-radius: var(--radius);
   border: 1px solid var(--line);
