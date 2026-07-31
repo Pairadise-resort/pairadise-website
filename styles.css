@@ -46,7 +46,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--header-h); /* keep anchors clear of sticky header */
+  scroll-padding-top: calc(var(--header-h) + var(--header-gap, 0px)); /* keep anchors clear of sticky header */
 }
 
 body {

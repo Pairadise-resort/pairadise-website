@@ -11,30 +11,128 @@
        ============================================================ -->
   <link rel="icon" type="image/png" href="assets/pairadise-logo.png" />
 
-  <!-- Google Fonts: Playfair Display (headings), Spectral (body), Montserrat (UI) -->
+  <!-- Google Fonts: Playfair Display (headings), Spectral (body), Montserrat (UI), Dancing Script (header nav accent) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Spectral:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Spectral:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
 
   <!-- ============================================================
-       Layout rules for the "Coming Soon / In Development" hero.
+       Layout rules for the floating header (unified with index.html)
+       and the "still in development" status hero.
        Not covered by styles.css, so it's inlined here. Feel free
        to move this into styles.css instead.
        ============================================================ -->
   <style>
+    /* ============================================================
+       HEADER: unified with index.html's floating nav bar, a white
+       rounded card that stays fixed with a gap from the viewport
+       edges while scrolling.
+       ============================================================ */
+    :root {
+      --header-h: 92px;
+      --header-gap: 16px;
+    }
+    @media (max-width: 640px) {
+      :root { --header-h: 78px; --header-gap: 12px; }
+    }
+
+    body {
+      padding-top: calc(var(--header-h) + var(--header-gap));
+    }
+
+    .site-header {
+      position: fixed;
+      top: var(--header-gap);
+      left: var(--header-gap);
+      right: var(--header-gap);
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 32px;
+      flex-wrap: nowrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-logo {
+      height: 40px;
+      width: auto;
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      row-gap: 6px;
+    }
+    .nav-list a {
+      font-family: 'Dancing Script', cursive;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #2b2b2b;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.2s ease;
+    }
+    .nav-list a:hover {
+      color: #9c7c46;
+    }
+
+    .header-cta {
+      background: #1c1c1c !important;
+      color: #fff !important;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 12px 26px;
+      border-radius: 999px;
+      white-space: nowrap;
+      border: none;
+    }
+    .header-cta:hover {
+      background: #3a3a3a !important;
+    }
+
+    .menu-toggle .menu-bar {
+      background: #2b2b2b;
+    }
+
+    /* ============================================================
+       STATUS HERO: "still in development" note.
+       ============================================================ */
     .about-status-hero {
       text-align: center;
       padding-top: 64px;
       padding-bottom: 8px;
     }
+    /* Distinct from every other heading on the page (which use
+       upright Playfair Display): this one uses the same flowing
+       script accent font as the nav, in the brand orange, so it
+       reads as a standalone note rather than a section title. */
     .about-status-hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 2.75rem);
-      font-weight: 600;
-      line-height: 1.25;
-      margin: 10px 0 16px;
+      font-family: 'Dancing Script', cursive;
+      font-weight: 700;
+      font-style: normal;
+      font-size: clamp(2.4rem, 6vw, 3.6rem);
+      line-height: 1.2;
+      color: var(--forest-text);
+      margin: 8px 0 16px;
     }
     .about-status-note {
       font-family: 'Spectral', serif;
@@ -75,8 +173,8 @@
         </ul>
       </nav>
 
-      <!-- REPLACE: booking link → currently Lodgify -->
-      <a class="btn btn-primary header-cta" href="https://pairadise.lodgify.com" target="_blank" rel="noopener noreferrer">Book Now</a>
+      <!-- REPLACE: booking link, currently the search widget on index.html -->
+      <a class="btn btn-primary header-cta" href="index.html#book-now">Book Now</a>
 
       <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
         <span class="menu-bar"></span>
@@ -96,7 +194,7 @@
     <section class="section about-status-hero">
       <div class="container container-narrow">
         <p class="eyebrow eyebrow-gold">Coming Soon</p>
-        <h1>This page is still in development</h1>
+        <h1>This concept is still in development</h1>
         <p class="about-status-note">We're actively building out the full story behind Pairadise. Some of what you see below is a work in progress, check back soon for the finished page.</p>
       </div>
     </section>
