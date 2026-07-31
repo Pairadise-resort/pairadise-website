@@ -145,29 +145,55 @@
   </style>
 
   <style>
-    .room-photo-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
+    /* ============================================================
+       ROOM PHOTO GALLERY
+       Desktop (>900px): a hover-activated horizontal ticker showing
+       4 photos at a time out of 8, scrolling seamlessly while
+       hovered and freezing when the mouse leaves. Built by duplicating
+       the 8 photos once (marked with .room-photo-dup, aria-hidden) so
+       the loop from image 8 back to image 1 is seamless.
+       Mobile/tablet (<=900px): reverts to the original static grid,
+       with the duplicated photos hidden and the animation disabled.
+       ============================================================ */
+    .room-photo-ticker {
+      overflow: hidden;
       margin: 32px 0 40px;
     }
-    .room-photo-grid img {
-      width: 100%;
-      height: 100%;
+    .room-photo-track {
+      display: flex;
+      gap: 12px;
+      width: 400%;
+      animation: room-photo-scroll 26s linear infinite;
+      animation-play-state: paused;
+    }
+    .room-photo-ticker:hover .room-photo-track {
+      animation-play-state: running;
+    }
+    .room-photo {
+      flex: 0 0 calc(6.25% - 11.25px);
       aspect-ratio: 4 / 3;
       object-fit: cover;
       border-radius: 12px;
       display: block;
-      transition: transform 0.3s ease;
     }
-    .room-photo-grid img:hover {
-      transform: scale(1.03);
+    @keyframes room-photo-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
     }
+
     @media (max-width: 900px) {
-      .room-photo-grid { grid-template-columns: repeat(3, 1fr); }
+      .room-photo-track {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: auto;
+        gap: 12px;
+        animation: none;
+      }
+      .room-photo { flex: initial; width: 100%; }
+      .room-photo-dup { display: none; }
     }
     @media (max-width: 600px) {
-      .room-photo-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .room-photo-track { grid-template-columns: repeat(2, 1fr); gap: 8px; }
     }
 
     .review-stars {
@@ -416,21 +442,37 @@
         </div>
 
         <!-- ============================================================
-             ROOM PHOTO GRID
-             A visual preview of the bungalows. Uses the existing
-             assets/room-01.jpg .. room-16.jpg files (unit 13 skipped,
-             same as the original room listing). Swap any src to feature
-             different units or photos.
+             ROOM PHOTO GALLERY
+             Desktop: hover to scroll sideways through all 8 photos,
+             4 visible at a time, like a ticker. Stops when the mouse
+             leaves. Mobile/tablet: plain static grid (see CSS), no
+             scrolling.
+             The .room-photo-dup images are an exact repeat of the 8
+             above them, used only to make the desktop loop seamless.
+             They're hidden on mobile and hidden from screen readers.
+             Uses the existing assets/room-01.jpg .. room-16.jpg files
+             (unit 13 skipped, same as the original room listing).
+             Swap any src to feature different units or photos.
              ============================================================ -->
-        <div class="room-photo-grid">
-          <img src="assets/room-01.jpg" alt="Pond View Superior bungalow at Pairadise Resort" loading="lazy" />
-          <img src="assets/room-07.jpg" alt="Garden View Superior bungalow at Pairadise Resort" loading="lazy" />
-          <img src="assets/room-09.jpg" alt="Garden View Superior LUX bungalow at Pairadise Resort" loading="lazy" />
-          <img src="assets/room-10.jpg" alt="Pond and garden view at Pairadise Resort" loading="lazy" />
-          <img src="assets/room-11.jpg" alt="Pond View Superior LUX bungalow at Pairadise Resort" loading="lazy" />
-          <img src="assets/room-06.jpg" alt="Pond View Superior bungalow interior at Pairadise Resort" loading="lazy" />
-          <img src="assets/room-16.jpg" alt="Pond View Superior LUX bungalow at Pairadise Resort" loading="lazy" />
-          <img src="assets/room-08.jpg" alt="Garden View Superior bungalow at Pairadise Resort" loading="lazy" />
+        <div class="room-photo-ticker">
+          <div class="room-photo-track">
+            <img class="room-photo" src="assets/room-01.jpg" alt="Pond View Superior bungalow at Pairadise Resort" loading="lazy" />
+            <img class="room-photo" src="assets/room-07.jpg" alt="Garden View Superior bungalow at Pairadise Resort" loading="lazy" />
+            <img class="room-photo" src="assets/room-09.jpg" alt="Garden View Superior LUX bungalow at Pairadise Resort" loading="lazy" />
+            <img class="room-photo" src="assets/room-10.jpg" alt="Pond and garden view at Pairadise Resort" loading="lazy" />
+            <img class="room-photo" src="assets/room-11.jpg" alt="Pond View Superior LUX bungalow at Pairadise Resort" loading="lazy" />
+            <img class="room-photo" src="assets/room-06.jpg" alt="Pond View Superior bungalow interior at Pairadise Resort" loading="lazy" />
+            <img class="room-photo" src="assets/room-16.jpg" alt="Pond View Superior LUX bungalow at Pairadise Resort" loading="lazy" />
+            <img class="room-photo" src="assets/room-08.jpg" alt="Garden View Superior bungalow at Pairadise Resort" loading="lazy" />
+            <img class="room-photo room-photo-dup" src="assets/room-01.jpg" alt="" aria-hidden="true" loading="lazy" />
+            <img class="room-photo room-photo-dup" src="assets/room-07.jpg" alt="" aria-hidden="true" loading="lazy" />
+            <img class="room-photo room-photo-dup" src="assets/room-09.jpg" alt="" aria-hidden="true" loading="lazy" />
+            <img class="room-photo room-photo-dup" src="assets/room-10.jpg" alt="" aria-hidden="true" loading="lazy" />
+            <img class="room-photo room-photo-dup" src="assets/room-11.jpg" alt="" aria-hidden="true" loading="lazy" />
+            <img class="room-photo room-photo-dup" src="assets/room-06.jpg" alt="" aria-hidden="true" loading="lazy" />
+            <img class="room-photo room-photo-dup" src="assets/room-16.jpg" alt="" aria-hidden="true" loading="lazy" />
+            <img class="room-photo room-photo-dup" src="assets/room-08.jpg" alt="" aria-hidden="true" loading="lazy" />
+          </div>
         </div>
 
         <!-- ============================================================
