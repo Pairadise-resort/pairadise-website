@@ -308,6 +308,14 @@ a:focus-visible, button:focus-visible {
   box-shadow: var(--shadow);
   border: 1px solid rgba(255,255,255,0.18);
 }
+.hero-video-section {
+  padding-top: 0;
+  text-align: center;
+}
+.hero-video-section .hero-video {
+  margin: 0 auto;
+  border-color: var(--line);
+}
 .hero-video iframe {
   display: block;
   width: 100%;

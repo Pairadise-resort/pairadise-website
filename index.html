@@ -113,6 +113,27 @@
       background: #2b2b2b;
     }
 
+    /* Location pin icon next to the "Pai · Mae Hong Son · Thailand"
+       eyebrow, kept as a separate element rather than inside the text. */
+    .hero-location {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .hero-location-icon {
+      display: inline-flex;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .hero-location-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+    .hero-location .hero-eyebrow {
+      margin-bottom: 0;
+    }
+
     /* Hero: pull the photo up behind the fixed header so it peeks
        through the gap and rounded corners, same effect as the
        reference site, while keeping hero text safely below the
@@ -337,7 +358,15 @@
       <div class="hero-bg" role="img" aria-label="Pairadise Resort gardens and bungalows in Pai"></div>
       <div class="hero-overlay"></div>
       <div class="container hero-content">
-        <p class="eyebrow hero-eyebrow">Pai &middot; Mae Hong Son &middot; Thailand</p>
+        <div class="hero-location">
+          <span class="hero-location-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 22s7-7.58 7-13A7 7 0 0 0 5 9c0 5.42 7 13 7 13Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <circle cx="12" cy="9" r="2.4" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
+          </span>
+          <p class="eyebrow hero-eyebrow">Pai &middot; Mae Hong Son &middot; Thailand</p>
+        </div>
         <h1>Peaceful bungalows in Pai, surrounded by water, mountains, and garden&nbsp;calm</h1>
         <p class="hero-sub">Stay close to Pai walking street while sleeping in a quiet natural&nbsp;retreat.</p>
 
@@ -355,7 +384,14 @@
           <li>Steam sauna</li>
           <li>10-15 min walk to town</li>
         </ul>
+      </div>
+    </section>
 
+    <!-- ============================================================
+         2b. VIDEO
+         ============================================================ -->
+    <section class="section hero-video-section">
+      <div class="container">
         <!-- REPLACE: YouTube video: swap the embed ID (JH7DWVd5GgA) and start time (start=37) to change the clip -->
         <div class="hero-video">
           <iframe
