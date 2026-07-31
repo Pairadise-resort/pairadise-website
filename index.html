@@ -162,7 +162,7 @@
     .room-photo-track {
       display: flex;
       gap: 12px;
-      width: 400%;
+      width: max-content;
       animation: room-photo-scroll 26s linear infinite;
       animation-play-state: paused;
     }
@@ -170,8 +170,9 @@
       animation-play-state: running;
     }
     .room-photo {
-      flex: 0 0 calc(6.25% - 11.25px);
-      aspect-ratio: 4 / 3;
+      flex: 0 0 auto;
+      width: 250px;
+      height: 200px;
       object-fit: cover;
       border-radius: 12px;
       display: block;
