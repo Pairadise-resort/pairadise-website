@@ -249,8 +249,9 @@ a:focus-visible, button:focus-visible {
 .hero-bg {
   position: absolute;
   inset: 0;
-  /* REPLACE: assets/hero.jpg, fallback gradient shows until the image is added */
-  background: linear-gradient(135deg, var(--forest-soft), var(--forest-deep)), url('assets/hero.jpg');
+  /* Photo on top; gradient sits behind as a true fallback, only
+     visible if hero.jpg fails to load. */
+  background: url('assets/hero.jpg') center/cover no-repeat, linear-gradient(135deg, var(--forest-soft), var(--forest-deep));
   background-size: cover;
   background-position: center;
   z-index: 0;
