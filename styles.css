@@ -327,7 +327,14 @@ a:focus-visible, button:focus-visible {
    Section scaffolding
    ============================================================ */
 .section { padding: clamp(56px, 9vw, 96px) 0; }
-.section-forest { background: var(--forest); color: var(--on-orange); }
+.section-forest {
+  background-color: var(--forest);
+  background-image: url('assets/amenities-sketch.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--on-orange);
+}
 .section-forest .eyebrow-gold { color: var(--on-orange); }
 .section-sand { background: #fff; }
 
