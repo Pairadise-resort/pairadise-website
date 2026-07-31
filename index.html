@@ -26,28 +26,30 @@
   <style>
     /* ============================================================
        HEADER REDESIGN: styled after schindlerhof.de/en's floating
-       nav bar: a white rounded-bottom card that sits fixed on top
-       of the hero image and stays pinned while scrolling.
+       nav bar: a white rounded card that floats above the hero
+       image with a small gap from the top edge, and stays pinned
+       while scrolling.
        ============================================================ */
     :root {
       --header-h: 92px;
+      --header-gap: 16px;
     }
     @media (max-width: 640px) {
-      :root { --header-h: 78px; }
+      :root { --header-h: 78px; --header-gap: 12px; }
     }
 
     body {
-      padding-top: var(--header-h);
+      padding-top: calc(var(--header-h) + var(--header-gap));
     }
 
     .site-header {
       position: fixed;
-      top: 0;
+      top: var(--header-gap);
       left: 0;
       width: 100%;
       background: #fff;
-      border-radius: 0 0 22px 22px;
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+      border-radius: 22px;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
       z-index: 1000;
     }
     .header-inner {
@@ -112,11 +114,12 @@
     }
 
     /* Hero: pull the photo up behind the fixed header so it peeks
-       through the rounded corners, same effect as the reference site,
-       while keeping hero text safely below the header height. */
+       through the gap and rounded corners, same effect as the
+       reference site, while keeping hero text safely below the
+       header height. */
     .hero {
-      margin-top: calc(-1 * var(--header-h));
-      padding-top: var(--header-h);
+      margin-top: calc(-1 * (var(--header-h) + var(--header-gap)));
+      padding-top: calc(var(--header-h) + var(--header-gap));
     }
   </style>
 
