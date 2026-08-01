@@ -1,0 +1,34 @@
+# Pairadise Resort
+
+> Pairadise Resort is a quiet, garden-and-pond bungalow resort in Pai, Mae Hong Son, Thailand, a 10-15 minute walk or short scooter ride from Pai's walking street, cafes, and night market. Rooms are private bungalows with air conditioning, private bathrooms, and free high-speed WiFi. The resort has a natural spring-fed swimming pool, a herbal steam sauna, and a fish pond with a fountain at its center.
+
+## Key facts
+
+- Location: 98 Moo 1, Baan Mae Yen, Mae Hee, Pai, Mae Hong Son, 58130, Thailand
+- Distance to Pai walking street: 10-15 minute walk, short scooter ride
+- Room types: Pond View Superior, Garden View Superior, Garden View Superior LUX, Family Studio Superior LUX, Pond View Superior LUX (15 bungalows total)
+- All rooms include: air conditioning, private bathroom, free high-speed WiFi
+- On-site amenities: natural mountain spring-fed swimming pool, herbal steam sauna, fish pond with fountain, Terrace View Restaurant (breakfast and light meals)
+- Check-in: 2:00 PM / Check-out: 11:00 AM
+- Parking: free, on-site, for cars and scooters
+- Contact (outside Thailand): +66-83-875-5379
+- Contact (inside Thailand): 083-875-5379
+- Email: management.pairadise@gmail.com
+- Booking: via Lodgify, linked from the homepage
+- Rated 4.6 out of 5 from 230+ Google reviews
+
+## Pages
+
+- [Home](https://pairadise-resort.github.io/pairadise-website/index.html): Rooms, amenities, availability search, and guest reviews
+- [About](https://pairadise-resort.github.io/pairadise-website/about.html): The resort's philosophy and background
+- [Happenings](https://pairadise-resort.github.io/pairadise-website/happenings.html): Current events, including a weekly Sunday vegan brunch with a community music jam, and a Full Moon Gathering with bonfire and music
+- [Team](https://pairadise-resort.github.io/pairadise-website/team.html): The people behind Pairadise
+- [Register Interest](https://pairadise-resort.github.io/pairadise-website/register-interest.html): Sign up for retreats and gatherings at Pairadise
+- [Privacy & Cookie Policy](https://pairadise-resort.github.io/pairadise-website/privacy-policy.html): Data and cookie practices
+
+## Nearby attractions
+
+- Yun Lai Viewpoint
+- Mor Paeng Waterfall
+- Santichon Village
+- White Buddha (Wat Phra That Mae Yen)
