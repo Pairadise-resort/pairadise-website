@@ -764,3 +764,172 @@ a:focus-visible, button:focus-visible {
 @media (max-width: 480px) {
   .cookie-banner { left: 10px; right: 10px; bottom: 10px; padding: 18px 18px; }
 }
+
+/* ============================================================
+   WHATSAPP CHAT WIDGET
+   Injected into the DOM by whatsapp-widget.js.
+   Uses WhatsApp's own brand green so it stays instantly
+   recognizable, independent of the site's orange accent color.
+   ============================================================ */
+.wa-widget-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1900;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25D366;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  transition: transform 0.15s ease;
+}
+.wa-widget-button:hover { transform: scale(1.06); }
+.wa-widget-button svg { width: 30px; height: 30px; }
+
+.wa-widget-panel {
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  z-index: 1900;
+  width: 320px;
+  max-width: calc(100vw - 32px);
+  max-height: min(480px, calc(100vh - 130px));
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(16px) scale(0.98);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.wa-widget-panel.is-open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.wa-widget-header {
+  background: #075E54;
+  color: #fff;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.wa-widget-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #fff;
+}
+.wa-widget-title {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.92rem;
+  line-height: 1.3;
+}
+.wa-widget-status {
+  font-family: var(--font-ui);
+  font-size: 0.74rem;
+  color: rgba(255,255,255,0.8);
+}
+.wa-widget-close {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.wa-widget-body {
+  background: #e5ddd0;
+  padding: 16px;
+  overflow-y: auto;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wa-widget-bubble {
+  background: #fff;
+  border-radius: 10px;
+  border-top-left-radius: 2px;
+  padding: 10px 13px;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 88%;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.08);
+}
+.wa-widget-prompts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+.wa-widget-prompt {
+  text-align: left;
+  background: #fff;
+  border: 1px solid #d8d0c2;
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: #075E54;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.wa-widget-prompt:hover { background: #f0f9f4; }
+
+.wa-widget-footer {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #f0f0f0;
+  border-top: 1px solid #ddd;
+}
+.wa-widget-input {
+  flex: 1 1 auto;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  outline: none;
+}
+.wa-widget-input:focus { border-color: #25D366; }
+.wa-widget-send {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #25D366;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.wa-widget-send svg { width: 18px; height: 18px; }
+
+@media (max-width: 480px) {
+  .wa-widget-button { right: 14px; bottom: 14px; width: 54px; height: 54px; }
+  .wa-widget-panel { right: 12px; bottom: 82px; }
+}
