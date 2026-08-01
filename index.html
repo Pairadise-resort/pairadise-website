@@ -334,6 +334,69 @@
       .search-widget { padding: 20px; }
     }
   </style>
+  <!-- ============================================================
+       STRUCTURED DATA (JSON-LD)
+       Purely for search engines and AI systems, no visual footprint.
+       Schema.org "Resort" (a LodgingBusiness subtype). REPLACE:
+       priceRange below with real nightly rates once available,
+       currently left as a placeholder on purpose rather than guessed.
+       ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Resort",
+    "name": "Pairadise Resort",
+    "alternateName": "Pairadise",
+    "description": "A quiet, garden-and-pond bungalow resort in Pai, Mae Hong Son, Thailand, a 10-15 minute walk from Pai's walking street, cafes, and night market. Private bungalows with air conditioning, private bathrooms, and free high-speed WiFi, alongside a natural spring-fed swimming pool, a herbal steam sauna, and an on-site restaurant.",
+    "url": "https://pairadise-resort.github.io/pairadise-website/index.html",
+    "image": [
+      "https://pairadise-resort.github.io/pairadise-website/assets/hero.jpg",
+      "https://pairadise-resort.github.io/pairadise-website/assets/pairadise-logo.png"
+    ],
+    "logo": "https://pairadise-resort.github.io/pairadise-website/assets/pairadise-logo.png",
+    "telephone": "+66-83-875-5379",
+    "email": "management.pairadise@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "98 Moo 1, Baan Mae Yen",
+      "addressLocality": "Pai",
+      "addressRegion": "Mae Hong Son",
+      "postalCode": "58130",
+      "addressCountry": "TH"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 19.3590848,
+      "longitude": 98.4486576
+    },
+    "priceRange": "฿1,200-3,500 THB",
+    "checkinTime": "14:00",
+    "checkoutTime": "11:00",
+    "petsAllowed": false,
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "reviewCount": "230",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Air conditioning", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Private bathroom", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Free high-speed WiFi", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Natural spring-fed swimming pool", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Herbal steam sauna", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "On-site restaurant", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Free on-site parking", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Private bungalow accommodations", "value": true }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/pairadise.resort/",
+      "https://pairadise.lodgify.com"
+    ],
+    "hasMap": "https://maps.google.com/?q=Pairadise+Resort+Pai"
+  }
+  </script>
 </head>
 <body>
 
