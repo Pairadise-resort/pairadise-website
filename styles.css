@@ -779,7 +779,7 @@ a:focus-visible, button:focus-visible {
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: #25D366;
+  background: #4A2210;
   border: none;
   display: flex;
   align-items: center;
@@ -817,7 +817,7 @@ a:focus-visible, button:focus-visible {
 }
 
 .wa-widget-header {
-  background: #075E54;
+  background: #4A2210;
   color: #fff;
   padding: 16px 18px;
   display: flex;
@@ -890,11 +890,11 @@ a:focus-visible, button:focus-visible {
   padding: 9px 14px;
   font-family: var(--font-ui);
   font-size: 0.8rem;
-  color: #075E54;
+  color: #4A2210;
   cursor: pointer;
   transition: background 0.15s ease;
 }
-.wa-widget-prompt:hover { background: #f0f9f4; }
+.wa-widget-prompt:hover { background: #f5ede4; }
 
 .wa-widget-footer {
   flex-shrink: 0;
@@ -914,13 +914,13 @@ a:focus-visible, button:focus-visible {
   font-size: 0.86rem;
   outline: none;
 }
-.wa-widget-input:focus { border-color: #25D366; }
+.wa-widget-input:focus { border-color: #4A2210; }
 .wa-widget-send {
   flex-shrink: 0;
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: #25D366;
+  background: #4A2210;
   border: none;
   display: flex;
   align-items: center;
