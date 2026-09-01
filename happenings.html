@@ -11,19 +11,103 @@
        ============================================================ -->
   <link rel="icon" type="image/png" href="assets/pairadise-logo.png" />
 
-  <!-- Google Fonts: Playfair Display (headings), Spectral (body), Montserrat (UI) -->
+  <!-- Google Fonts: Playfair Display (headings), Spectral (body), Montserrat (UI), Dancing Script (header nav accent) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Spectral:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Spectral:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
 
   <!-- ============================================================
-       Layout rules for the Happenings hero and photo placeholders.
+       Layout rules for the floating header (unified with index.html,
+       about.html, team.html) and the Happenings hero/photo grids.
        Not covered by styles.css, so it's inlined here. Feel free
        to move this into styles.css instead.
        ============================================================ -->
   <style>
+    :root {
+      --header-h: 92px;
+      --header-gap: 16px;
+    }
+    @media (max-width: 640px) {
+      :root { --header-h: 78px; --header-gap: 12px; }
+    }
+
+    body {
+      padding-top: calc(var(--header-h) + var(--header-gap));
+    }
+
+    .site-header {
+      position: fixed;
+      top: var(--header-gap);
+      left: var(--header-gap);
+      right: var(--header-gap);
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 32px;
+      flex-wrap: nowrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-logo {
+      height: 40px;
+      width: auto;
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      row-gap: 6px;
+    }
+    .nav-list a {
+      font-family: 'Dancing Script', cursive;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #2b2b2b;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.2s ease;
+    }
+    .nav-list a:hover {
+      color: #9c7c46;
+    }
+
+    .header-cta {
+      background: #1c1c1c !important;
+      color: #fff !important;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 12px 26px;
+      border-radius: 999px;
+      white-space: nowrap;
+      border: none;
+    }
+    .header-cta:hover {
+      background: #3a3a3a !important;
+    }
+
+    .menu-toggle .menu-bar {
+      background: #2b2b2b;
+    }
+
     .about-status-hero {
       text-align: center;
       padding-top: 64px;
@@ -70,6 +154,13 @@
     @media (max-width: 900px) {
       .happenings-photo-grid { grid-template-columns: repeat(2, 1fr); }
     }
+    /* Full Moon Gathering only has 2 photos, use a 2-column layout
+       instead of the shared 4-column default so they fill the row
+       properly instead of leaving empty grid tracks. */
+    .happenings-photo-grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 520px;
+    }
   </style>
 </head>
 <body>
@@ -101,8 +192,8 @@
         </ul>
       </nav>
 
-      <!-- REPLACE: booking link → currently Lodgify -->
-      <a class="btn btn-primary header-cta" href="https://pairadise.lodgify.com" target="_blank" rel="noopener noreferrer">Book Now</a>
+      <!-- REPLACE: booking link, currently the search widget on index.html -->
+      <a class="btn btn-primary header-cta" href="index.html#book-now">Book Now</a>
 
       <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
         <span class="menu-bar"></span>
@@ -179,11 +270,9 @@
                Full Moon Gathering once you have them. Currently styled
                placeholder boxes, not broken image links.
                ============================================================ -->
-          <div class="happenings-photo-grid">
+          <div class="happenings-photo-grid happenings-photo-grid-2">
             <img class="happenings-photo" src="assets/happenings-fullmoon-01.jpg" alt="Full Moon Gathering at Pairadise Resort" loading="lazy" />
             <img class="happenings-photo" src="assets/happenings-fullmoon-02.jpg" alt="Full Moon Gathering at Pairadise Resort" loading="lazy" />
-            <img class="happenings-photo" src="assets/happenings-fullmoon-03.jpg" alt="Full Moon Gathering at Pairadise Resort" loading="lazy" />
-            <img class="happenings-photo" src="assets/happenings-fullmoon-04.jpg" alt="Full Moon Gathering at Pairadise Resort" loading="lazy" />
           </div>
         </div>
 
@@ -313,7 +402,7 @@
           <li><a href="index.html#location">Location</a></li>
           <li><a href="index.html#faq">FAQ</a></li>
           <!-- REPLACE: booking link → Lodgify -->
-          <li><a href="https://pairadise.lodgify.com" target="_blank" rel="noopener noreferrer">Book Now</a></li>
+          <li><a href="index.html#book-now">Book Now</a></li>
         </ul>
       </div>
 
