@@ -154,12 +154,11 @@
     @media (max-width: 900px) {
       .happenings-photo-grid { grid-template-columns: repeat(2, 1fr); }
     }
-    /* Full Moon Gathering only has 2 photos, use a 2-column layout
-       instead of the shared 4-column default so they fill the row
-       properly instead of leaving empty grid tracks. */
+    /* 2-column layout: used by Full Moon Gathering (2 photos, one
+       row) and Vegan Brunch (4 photos, two rows), so photos display
+       larger than the shared 4-column default. */
     .happenings-photo-grid-2 {
       grid-template-columns: repeat(2, 1fr);
-      max-width: 520px;
     }
   </style>
 </head>
@@ -248,7 +247,7 @@
 
           <p>Every lunch ticket also enters you into our lucky draw, with a chance to win small prizes or a discount on your next lunch with us. All are welcome, whether you're staying at Pairadise or just visiting for the day.</p>
 
-          <div class="happenings-photo-grid">
+          <div class="happenings-photo-grid happenings-photo-grid-2">
             <img class="happenings-photo" src="assets/happenings-brunch-01.jpg" alt="Vegan Brunch and Music Jam at Pairadise Resort" loading="lazy" />
             <img class="happenings-photo" src="assets/happenings-brunch-02.jpg" alt="Vegan Brunch and Music Jam at Pairadise Resort" loading="lazy" />
             <img class="happenings-photo" src="assets/happenings-brunch-03.jpg" alt="Vegan Brunch and Music Jam at Pairadise Resort" loading="lazy" />

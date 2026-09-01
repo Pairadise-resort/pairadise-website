@@ -683,6 +683,7 @@ a:focus-visible, button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
+  .wa-widget-button::before { animation: none !important; opacity: 0 !important; }
 }
 
 /* ============================================================
@@ -788,8 +789,46 @@ a:focus-visible, button:focus-visible {
   box-shadow: 0 8px 24px rgba(0,0,0,0.25);
   transition: transform 0.15s ease;
 }
-.wa-widget-button:hover { transform: scale(1.06); }
+.wa-widget-button:hover { transform: scale(1.08); }
 .wa-widget-button svg { width: 30px; height: 30px; }
+
+/* Pulsing ring: draws the eye without being an animated GIF-style
+   nuisance. Stops once the chat panel is opened (aria-expanded="true"
+   is set by whatsapp-widget.js). */
+.wa-widget-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #4A2210;
+  z-index: -1;
+  animation: wa-pulse-ring 2.4s ease-out infinite;
+}
+.wa-widget-button[aria-expanded="true"]::before {
+  animation: none;
+  opacity: 0;
+}
+@keyframes wa-pulse-ring {
+  0%   { transform: scale(1);    opacity: 0.55; }
+  100% { transform: scale(2.1);  opacity: 0; }
+}
+
+/* Small notification badge, standard "you have a message" cue. */
+.wa-widget-button::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 15px;
+  height: 15px;
+  background: #E63946;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+.wa-widget-button[aria-expanded="true"]::after {
+  display: none;
+}
 
 .wa-widget-panel {
   position: fixed;
